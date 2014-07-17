@@ -20,6 +20,9 @@
 		
 		<div id="content">
 			<tiles:insertAttribute name="content" />
-		</div>		
+		</div>
+                <div id="footer">
+                    This web app is based on open source frameworks Apache Jena, Spring MVC, Spring Social
+		</div>	
 	</body>
 </html>

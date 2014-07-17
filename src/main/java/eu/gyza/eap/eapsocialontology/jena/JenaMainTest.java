@@ -26,10 +26,15 @@ import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.util.PrintUtil;
 import com.hp.hpl.jena.vocabulary.VCARD;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Reader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,7 +48,7 @@ public class JenaMainTest {
     static String personURI = "http://somewhere/JohnSmith";
     static String fullName = "John Smith";
 
-    public static void ginasOWL(){
+    public static void ginasOWL() throws MalformedURLException, IOException{
        
         
         // create an empty Model
@@ -57,7 +62,14 @@ public class JenaMainTest {
         //String SOURCE = "http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology";
         String NS = SOURCE + "#";
         String foafNS ="http://xmlns.com/foaf/0.1/";
-        String file = "C://projects/GinasThesis_EAP/protegeOntology/eapOntology3.owl";
+        String file = "C://projects/eap/eapOntology3.owl";
+        String urlSting = "https://github.com/nikolakg/EAPSocialOntology/blob/master/src/main/resources/eapOntology3.owl";
+        
+        
+        URL url = new URL(urlSting);
+	// read text returned by server
+	
+		    
         
         File f = new File(file);
         Reader reader = null;
@@ -66,6 +78,8 @@ public class JenaMainTest {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(JenaMainTest.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+       // BufferedReader reader2 = new BufferedReader(new InputStreamReader(url.openStream()));
         OntModel base = ModelFactory.createOntologyModel(OWL_MEM);
         base.read(reader, "RDF/XML");
 
@@ -222,7 +236,7 @@ public class JenaMainTest {
       ///  body.addLabel("has programme", "en");
     }
     
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
       ginasOWL();
     }
 

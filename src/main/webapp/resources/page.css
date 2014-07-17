@@ -18,6 +18,16 @@ body {
         background-size:auto;
 }
 
+#footer {
+	margin: 0 auto;
+	bottom: 0;
+        width: 50%;
+        background-color:#afa;
+        height:150px;
+        position:fixed;
+        text-align:center;
+}
+
 #header h1 a {
 	//color: #ccff99; 
         color: #003333;

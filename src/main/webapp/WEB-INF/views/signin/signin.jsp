@@ -45,8 +45,8 @@
 
 	<!-- FACEBOOK SIGNIN -->
 	<form name="fb_signin" id="fb_signin" action="<c:url value="/signin/facebook"/>" method="POST">
-        <input type="hidden" name="scope" value="publish_stream,user_photos,offline_access" />
-		<button type="submit"><img src="<c:url value="/resources/social/facebook/sign-in-with-facebook.png"/>" /></button>
+            <input type="hidden" name="scope" value="publish_stream,user_photos,offline_access" />
+            <button type="submit"><img src="<c:url value="/resources/social/facebook/sign-in-with-facebook.png"/>" /></button>
 	</form>
 
 	<!-- LINKEDIN SIGNIN -->

@@ -15,3 +15,13 @@ $> sudo service tomcat7 start
 /usr/share/tomcat7
 
 http://ec2-54-186-135-132.us-west-2.compute.amazonaws.com:8080/eap
+
+1. commit in local repo (master)
+git commit -a 
+2. commit in remote repo (origin)
+git fetch origin master
+git rebase -i origin/master
+git push origin master
+
+3. pick changes from origin (and moves your local changes onto the top)
+git pull --rebase origin

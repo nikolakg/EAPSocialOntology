@@ -16,9 +16,7 @@ import com.hp.hpl.jena.ontology.OntProperty;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.NodeIterator;
 import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
@@ -26,18 +24,18 @@ import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.util.PrintUtil;
 import com.hp.hpl.jena.vocabulary.VCARD;
-import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.mindswap.pellet.jena.PelletReasonerFactory;
 
 /**
  *
@@ -49,7 +47,12 @@ public class JenaMainTest {
     static String fullName = "John Smith";
 
     public static void ginasOWL() throws MalformedURLException, IOException{
-       
+       // ontology that will be used
+        String ont = "http://www.mindswap.org/2004/owl/mindswappers";
+        
+// create an empty ontology model using Pellet spec
+            
+
         
         // create an empty Model
         
@@ -62,11 +65,12 @@ public class JenaMainTest {
         //String SOURCE = "http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology";
         String NS = SOURCE + "#";
         String foafNS ="http://xmlns.com/foaf/0.1/";
-        String file = "C://projects/eap/eapOntology3.owl";
-        String urlSting = "https://github.com/nikolakg/EAPSocialOntology/blob/master/src/main/resources/eapOntology3.owl";
+        //String file = "C://projects/eap/eapOntology3.owl";
+        String file = "C:\\projects\\GinasThesis_EAP\\protegeOntology\\eapOntology4.owl";
+     //   String urlSting = "https://github.com/nikolakg/EAPSocialOntology/blob/master/src/main/resources/eapOntology3.owl";
         
         
-        URL url = new URL(urlSting);
+       // URL url = new URL(urlSting);
 	// read text returned by server
 	
 		    
@@ -74,7 +78,9 @@ public class JenaMainTest {
         File f = new File(file);
         Reader reader = null;
         try {
-            reader = new FileReader(f);
+          // reader = new FileReader(f);
+             reader = new InputStreamReader(
+                      new FileInputStream(f), "UTF8");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(JenaMainTest.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -84,8 +90,9 @@ public class JenaMainTest {
         base.read(reader, "RDF/XML");
 
 // create the reasoning model using the base
-        OntModel inf = ModelFactory.createOntologyModel(OWL_MEM_MICRO_RULE_INF, base);
-        
+        //OntModel inf = ModelFactory.createOntologyModel(OWL_MEM_MICRO_RULE_INF, base);
+        OntModel inf = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC, base );   
+
         
         
 // create a dummy paper for this example
@@ -117,8 +124,8 @@ public class JenaMainTest {
         //msg1.addLiteral(messageTextProp, );
        
         model.add(msg1, messageTextProp,  "Banana Test");
-        musicGrp1.setPropertyValue(hasInterestOntProp, musciInt);
-        ind.setPropertyValue(likesOntProp, musciInt);
+//        musicGrp1.setPropertyValue(hasInterestOntProp, musciInt);
+//        ind.setPropertyValue(likesOntProp, musciInt);
         base.createIndividual(NS + "FriendMaria", friendOnt);
         base.createIndividual(NS + "FriendSophia", friendOnt);
 
@@ -158,19 +165,30 @@ public class JenaMainTest {
             Object o = i.next();
             System.out.println(personInd.getLocalName()+ " is inferred to have RDFTypes  " + o);
         }
-        Resource musicFiendResouce = inf1.getResource(NS + "MusicFriend");
-        inf.listIndividuals(musicFiendResouce);
+        Resource eduFiendResouce = inf1.getResource(NS + "EducationFriend");
+       // inf.listIndividuals(eduFiendResouce);
         
-        for (Iterator<Individual> i = inf.listIndividuals(musicFiendResouce); i.hasNext();) {   
+        for (Iterator<Individual> i = inf.listIndividuals(eduFiendResouce); i.hasNext();) {   
             Individual o = i.next();
-            System.out.println(o.getLocalName()+ " is MusicFriend" );
+            System.out.println(o.getLocalName()+ " is EducationFriend" );
         }
         
-        for (NodeIterator i = inf.listObjectsOfProperty(ownerOntProp); i.hasNext();) {   
-            RDFNode o = i.next();
-            System.out.println(o + " is RDFNode of ownerProp" );
+        Resource foodAndDrinkMessageResource = inf1.getResource(NS + "FoodAndDrinkMessage");
+       // inf.listIndividuals(foodAndDrinkMessageResource);
+        
+        for (Iterator<Individual> i = inf.listIndividuals(foodAndDrinkMessageResource); i.hasNext();) {   
+            Individual o = i.next();
+            System.out.println(o.getLocalName()+ " is foodAndDrinkMessage" );
         }
         
+        Resource fanddFiendResouce = inf.getResource(NS + "FoodAndDrinkFriend");
+       // inf.listIndividuals(fanddFiendResouce);
+        
+        for (Iterator<Individual> i = inf.listIndividuals(fanddFiendResouce); i.hasNext();) {   
+            Individual o = i.next();
+            System.out.println(o.getLocalName()+ " is FoodAndDrinkFriend" );
+        }
+               
         
         
     }

@@ -7,4 +7,18 @@
                 <goal>tomcat:run</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-tomcat7:run</actionName>
+            <displayName>tomcat7:run</displayName>
+            <goals>
+                <goal>tomcat7:run</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-tomcat7:deploy</actionName>
+            <displayName>tomcat7:deploy</displayName>
+            <goals>
+                <goal>tomcat7:deploy</goal>
+            </goals>
+        </action>
     </actions>

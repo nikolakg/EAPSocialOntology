@@ -146,14 +146,15 @@
             <artifactId>hibernate-validator</artifactId>
             <version>4.1.0.Final</version>
         </dependency>
-	    
+	
+        
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${org.slf4j-version}</version>
         </dependency>
-        <dependency>
+        <!--dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
             <version>${org.slf4j-version}</version>
@@ -170,8 +171,13 @@
             <artifactId>log4j</artifactId>
             <version>1.2.16</version>
             <scope>runtime</scope>
-        </dependency>
-		
+        </dependency-->
+        <dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-simple</artifactId>
+		<version>${org.slf4j-version}</version>
+	</dependency>	
+        
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -300,13 +306,25 @@
                     <warName>eap-social-ontology</warName>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>tomcat-maven-plugin</artifactId>
                 <version>1.1</version>
                 <configuration>
                     <path>/eap</path>
                     <port>8090</port>
+                </configuration>
+            </plugin-->
+             <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://ec2-54-186-135-132.us-west-2.compute.amazonaws.com:8080/manager/text</url>
+                    <path>/eap</path>
+                    <server>ec2server</server>
+                    <!--port>8090</port-->
+                    <warFile>target/eap-social-ontology.war</warFile>
                 </configuration>
             </plugin>
             <plugin>

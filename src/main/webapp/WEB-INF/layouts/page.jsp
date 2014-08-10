@@ -22,7 +22,8 @@
 			<tiles:insertAttribute name="content" />
 		</div>
                 <div id="footer">
-                    This web app is based on open source frameworks Apache Jena, Spring MVC, Spring Social
+                    This web app is based on open source frameworks libs and APIs 
+                    ,like Apache Jena, Pellet, Spring MVC, Spring Social and others 
 		</div>	
 	</body>
 </html>

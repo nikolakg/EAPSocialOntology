@@ -20,25 +20,23 @@ import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import static com.hp.hpl.jena.ontology.OntModelSpec.OWL_MEM;
-import static com.hp.hpl.jena.ontology.OntModelSpec.OWL_MEM_MICRO_RULE_INF;
 import com.hp.hpl.jena.ontology.OntProperty;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
-import eu.gyza.eap.eapsocialontology.jena.JenaMainTest;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.Reader;
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.inject.Inject;
-import org.springframework.social.twitter.api.CursoredList;
+import org.mindswap.pellet.jena.PelletReasonerFactory;
 import org.springframework.social.twitter.api.Tweet;
 
 import org.springframework.social.twitter.api.Twitter;
-import org.springframework.social.twitter.api.TwitterProfile;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,8 +49,8 @@ public class TwitterOntologyController {
     private OntModel infOntModel;
     private static String SOURCE = "http://www.eap.gr/gyza/ontology/social";
     private static String NS = SOURCE + "#";
-    private static String file = "C://projects/GinasThesis_EAP/protegeOntology/eapOntology3.owl";
-
+   // private static String file = "C://projects/GinasThesis_EAP/protegeOntology/eapOntology3.owl";
+    private static String ontologyResource = "eapOntology4.owl";
     @Inject
     public TwitterOntologyController(Twitter twitter) {
         this.twitter = twitter;
@@ -63,21 +61,38 @@ public class TwitterOntologyController {
         loadModel();
         model.addAttribute("musicFriends", getMusicFiends());
         model.addAttribute("foodFriends", getFoodFiends());
-       
+        model.addAttribute("eduFriends", getEduFiends());
+        model.addAttribute("healthFriends", getHealthFriends());
+        model.addAttribute("messageForm", new MessageForm());
+        
+        String fileName = "new_"+ontologyResource;
+        FileWriter out = null;
+        try {
+            out = new FileWriter( fileName );
+        } catch (IOException ex) {
+            Logger.getLogger(TwitterOntologyController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            infOntModel.write( out, "RDF/XML" );
+        }
+        finally {
+           try {
+               out.close();
+           }
+           catch (IOException closeException) {
+               // ignore
+           }
+        }
+
+        
         return "twitter/ontology";
     }
 
     public void loadModel() {
-      //  CursoredList<TwitterProfile> friendsList = twitter.friendOperations().getFriends();
-        List<Tweet> tweetList = twitter.timelineOperations().getHomeTimeline(50); 
-       
-        File f = new File(file);
-        Reader reader = null;
-        try {
-            reader = new FileReader(f);
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(JenaMainTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        List<Tweet> tweetList = twitter.timelineOperations().getHomeTimeline(100); 
+        InputStream inputStream = 
+            getClass().getClassLoader().getResourceAsStream(ontologyResource);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream ));
         OntModel base = ModelFactory.createOntologyModel(OWL_MEM);
         base.read(reader, "RDF/XML");
        
@@ -87,21 +102,30 @@ public class TwitterOntologyController {
         
         OntClass messageOnt = base.getOntClass(NS + "Message");
         DatatypeProperty messageTextProp = base.getDatatypeProperty(NS + "messageText" );
+        OntProperty hasOwnerOntProp = base.getOntProperty( NS + "hasOwner" );
+        
         Individual friendInd;
         int j=0;
         for (Tweet t : tweetList) {
-            friendInd = base.getIndividual(NS +  t.getFromUserId());
+            friendInd = base.getIndividual(NS +  t.getFromUser());
             if( friendInd == null){
-                friendInd = base.createIndividual(NS +  t.getFromUserId(), friendOnt);
+                friendInd = base.createIndividual(NS +  t.getFromUser(), friendOnt);
+            
             }
             Individual msg1 = base.createIndividual(NS + "Msg"+(j++), messageOnt);
-            friendInd.setPropertyValue(ownerOntProp, msg1);
+            //friendInd.setPropertyValue(ownerOntProp, msg1);
+            msg1.setPropertyValue(hasOwnerOntProp, friendInd);
             base.add(msg1, messageTextProp,  t.getText());
+            System.out.println("In Model, added to ["+t.getFromUser()+"] message ["+t.getText()+"]");
         }
         
         
         
-        infOntModel = ModelFactory.createOntologyModel(OWL_MEM_MICRO_RULE_INF, base);
+        //infOntModel = ModelFactory.createOntologyModel(OWL_MEM_MICRO_RULE_INF, base);
+        // create the reasoning model using the base
+        //OntModel inf = ModelFactory.createOntologyModel(OWL_MEM_MICRO_RULE_INF, base);
+        infOntModel = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC, base );   
+
       
     }
 
@@ -116,11 +140,39 @@ public class TwitterOntologyController {
     }
     
     public Iterator<Individual> getFoodFiends() {
-        Resource foodFiendResouce = infOntModel.getResource(NS + "FoodFriend");
+        Resource foodFiendResouce = infOntModel.getResource(NS + "FoodAndDrinkFriend");
 
         for (Iterator<Individual> i = infOntModel.listIndividuals(foodFiendResouce); i.hasNext();) {   
             Individual o = i.next();
-            System.out.println(o.getLocalName()+ " is FoodFriend" );
+            System.out.println(o.getLocalName()+ " is FoodAndDrinkFriend" );
+        }
+        return infOntModel.listIndividuals(foodFiendResouce);
+    }
+    public Iterator<Individual> getEduFiends() {
+        Resource foodFiendResouce = infOntModel.getResource(NS + "EducationFriend");
+
+        for (Iterator<Individual> i = infOntModel.listIndividuals(foodFiendResouce); i.hasNext();) {   
+            Individual o = i.next();
+            System.out.println(o.getLocalName()+ " is EducationFriend" );
+        }
+        return infOntModel.listIndividuals(foodFiendResouce);
+    }
+    public Iterator<Individual> getHealthFriends() {
+        Resource foodFiendResouce = infOntModel.getResource(NS + "HealthFriend");
+
+        for (Iterator<Individual> i = infOntModel.listIndividuals(foodFiendResouce); i.hasNext();) {   
+            Individual o = i.next();
+            System.out.println(o.getLocalName()+ " is HealthFriend" );
+        }
+        return infOntModel.listIndividuals(foodFiendResouce);
+    }
+    
+    public Iterator<Individual> getScienceFriends() {
+        Resource foodFiendResouce = infOntModel.getResource(NS + "ScienceFriend");
+
+        for (Iterator<Individual> i = infOntModel.listIndividuals(foodFiendResouce); i.hasNext();) {   
+            Individual o = i.next();
+            System.out.println(o.getLocalName()+ " is ScienceFriend" );
         }
         return infOntModel.listIndividuals(foodFiendResouce);
     }

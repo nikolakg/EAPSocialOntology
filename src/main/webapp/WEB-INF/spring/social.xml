@@ -19,7 +19,7 @@
 
 	<facebook:config app-id="${facebook.clientId}" app-secret="${facebook.clientSecret}" app-namespace="socialshowcase" />
 	<twitter:config app-id="${twitter.consumerKey}" app-secret="${twitter.consumerSecret}"/>
-	<linkedin:config app-id="${linkedin.consumerKey}" app-secret="${linkedin.consumerSecret}"/>
+	<!--linkedin:config app-id="${linkedin.consumerKey}" app-secret="${linkedin.consumerSecret}"/-->
 
 	<social:jdbc-connection-repository/>	
 	<bean id="userIdSource" class="org.springframework.social.security.AuthenticationNameUserIdSource" />

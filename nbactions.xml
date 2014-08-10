@@ -28,4 +28,11 @@
                 <goal>tomcat7:deploy</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-clean:clean</actionName>
+            <displayName>clean:clean</displayName>
+            <goals>
+                <goal>clean:clean</goal>
+            </goals>
+        </action>
     </actions>

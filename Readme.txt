@@ -25,3 +25,6 @@ git push origin master
 
 3. pick changes from origin (and moves your local changes onto the top)
 git pull --rebase origin
+
+--- MAVEN deploy to remote server
+http://wiki.aiwsolutions.net/2014/02/20/deploy-web-application-to-remote-tomcat-7-server/

@@ -28,29 +28,30 @@
 	</fieldset>
 	<button type="submit">Sign In</button>
 	
-	<p>Some test user/password pairs you may use are:</p>
-	<ul>
+	<p>Some test user/password : 
+            <br>eapsocial/eapsocial123</p>
+	<!--ul>
 		<li>habuma/freebirds</li>
 		<li>kdonald/melbourne</li>
 		<li>rclarkson/atlanta</li>
-	</ul>
+	</ul-->
 	
 	<p>Or you can <a href="<c:url value="/signup"/>">signup</a> with a new account.</p>
 </form>
 
 	<!-- TWITTER SIGNIN -->
 	<form id="tw_signin" action="<c:url value="/signin/twitter"/>" method="POST">
-		<button type="submit"><img src="<c:url value="/resources/social/twitter/sign-in-with-twitter-d.png"/>" /></button>
+            <button type="submit"><img src="<c:url value="/resources/social/twitter/sign-in-with-twitter-d.png"/>" /></button>
 	</form>
 
 	<!-- FACEBOOK SIGNIN -->
-	<form name="fb_signin" id="fb_signin" action="<c:url value="/signin/facebook"/>" method="POST">
+	<form id="fb_signin"   action="<c:url value="/signin/facebook"/>" method="POST" name="fb_signin">
             <input type="hidden" name="scope" value="publish_stream,user_photos,offline_access" />
-            <button type="submit"><img src="<c:url value="/resources/social/facebook/sign-in-with-facebook.png"/>" /></button>
+            <button type="submit"><img src="<c:url value="/resources/social/twitter/sign-in-with-facebook.png"/>" /></button>
 	</form>
 
-	<!-- LINKEDIN SIGNIN -->
+	<!-- LINKEDIN SIGNIN
 	<form name="li_signin" id="li_signin" action="<c:url value="/signin/linkedin"/>" method="POST">
 		<button type="submit">Sign In with LinkedIn</button>
-	</form>
+	</form> -->
 	

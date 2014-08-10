@@ -17,9 +17,45 @@ Music Friends are:
 		<li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
 </ul>
+
+Science Friends are:
+<ul>
+<c:forEach items="${scienceFriends}" var="ontology">
+		<li><c:out value="${ontology.localName}"/></lo>
+</c:forEach>
+</ul>
+
 Food Friends are:
 <ul>
 <c:forEach items="${foodFriends}" var="ontology">
 		<li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
 </ul>
+Health Friends are:
+<ul>
+<c:forEach items="${healthFriends}" var="ontology">
+		<li><c:out value="${ontology.localName}"/></lo>
+</c:forEach>
+</ul>
+Education Friends are:
+<ul>
+<c:forEach items="${eduFriends}" var="ontology">
+		<li><c:out value="${ontology.localName}"/></lo>
+</c:forEach>
+</ul>
+
+<c:url var="sendMessageUrl" value="/twitter/messages" />
+<sf:form action="${sendMessageUrl}" method="post" modelAttribute="messageForm">
+	<p>Send a message to Ontology Group Friends</p>
+	<sf:label path="to">To: </sf:label><sf:select path="friend">
+         
+   <sf:option value="NONE" label="--- Select ---"/>
+   <sf:option value="muscFriends" label="Music Friends"/>
+   <sf:option value="foodFriends" label="Food Friends"/>
+   <sf:option value="healthFriends" label="Health Friends"/>
+   <sf:option value="eduFriends" label="Education Friends"/>
+   
+</sf:select><br/>
+	<sf:textarea path="text" rows="2" cols="80"/><br/>
+	<input type="submit" value="Send Message"/>
+</sf:form>

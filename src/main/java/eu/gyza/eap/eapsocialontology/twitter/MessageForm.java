@@ -21,6 +21,16 @@ public class MessageForm {
 	
 	private String text;
 
+        private String friend;
+
+    public String getFriend() {
+        return friend;
+    }
+
+    public void setFriend(String friend) {
+        this.friend = friend;
+    }
+        
 	public String getTo() {
 		return to;
 	}

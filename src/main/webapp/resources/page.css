@@ -21,11 +21,11 @@ body {
 #footer {
 	margin: 0 auto;
 	bottom: 0;
-        width: 50%;
-        background-color:#afa;
-        height:150px;
+        width: 100%;
+        background-color:#CCCC99;
+        height:30px;
         position:fixed;
-        text-align:center;
+        text-align:left;
 }
 
 #header h1 a {
@@ -40,7 +40,8 @@ body {
 	float: left;
 	width: 150px;
 	//background-color: #ccffcc;
-        background-color: #666699;
+        //background-color: #666699;
+         background: linear-gradient(#666699, ivory); 
 }
 
 #content {

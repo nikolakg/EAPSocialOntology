@@ -12,9 +12,9 @@
 <form action="<c:url value="/connect/facebook" />" method="POST">
 	<input type="hidden" name="scope" value="publish_actions,user_friends,read_friendlists,read_stream,user_photos,offline_access" />
 	<div class="formInfo">
-		<%// <p>You aren't connected to Facebook yet. Click the button to connect Spring Social Showcase with your Facebook account.</p> %>
+		<%// <p>You aren't connected to Facebook yet. Click the button to connect EAP Social Ontology with your Facebook account.</p> %>
                 <p>Δεν είσαστε συνδεδεμένοι στο Facebook. Πατήστε το κουμπί ώστε να συνδεθεί η εφραμογή με τον λογαριασμό σας στο Facebook.</p>
 	</div>
 	<p><button type="submit"><img src="<c:url value="/resources/social/facebook/connect_light_medium_short.gif" />"/></button></p>
-	<%// label for="postToWall"><input id="postToWall" type="checkbox" name="postToWall" /> Tell your friends about Spring Social Showcase on your Facebook wall</label //%>    
+	<%// label for="postToWall"><input id="postToWall" type="checkbox" name="postToWall" /> Tell your friends about EAP Social Ontology on your Facebook wall</label //%>    
 </form>

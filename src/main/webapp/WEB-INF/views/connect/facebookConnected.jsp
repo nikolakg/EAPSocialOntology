@@ -8,7 +8,7 @@
 <form id="disconnect" method="post">
 	<div class="formInfo">
 		<%// <p>  %>
-		<%//	Spring Social Showcase is connected to your Facebook account.%>
+		<%//	EAP Social Ontology is connected to your Facebook account.%>
 		<%//	Click the button if you wish to disconnect.%>
 		<%//</p> %>
                 <p>

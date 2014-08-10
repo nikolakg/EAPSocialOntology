@@ -15,7 +15,11 @@
  */
 package eu.gyza.eap.eapsocialontology.twitter;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.stereotype.Controller;
@@ -38,9 +42,22 @@ public class TwitterMessageController {
 		model.addAttribute("directMessages", twitter.directMessageOperations().getDirectMessagesReceived());
 		model.addAttribute("dmListType", "Received");
 		model.addAttribute("messageForm", new MessageForm());
+                
 		return "twitter/messages";
 	}
 
+        protected Map referenceData(HttpServletRequest request) throws Exception {
+		Map referenceData = new HashMap();
+                Map<String,String> friendGroups = new LinkedHashMap<String,String>();
+                friendGroups.put("muscFriends", "Music Friends");
+                friendGroups.put("foodFriends", "Food Friends");
+                friendGroups.put("healthFriends", "Health Friends");
+                friendGroups.put("eduFriends", "Education Friends");
+                friendGroups.put("scienceFriends", "Science Friends");
+                referenceData.put("friendList", friendGroups);
+                return referenceData;
+	}
+        
 	@RequestMapping(value="/twitter/messages/sent", method=RequestMethod.GET)
 	public String sent(Model model) {
 		model.addAttribute("directMessages", twitter.directMessageOperations().getDirectMessagesSent());

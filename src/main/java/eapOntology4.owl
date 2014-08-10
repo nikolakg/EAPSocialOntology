@@ -1,0 +1,1325 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY social "http://www.eap.gr/gyza/ontology/social#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology#"
+     xml:base="http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:social="http://www.eap.gr/gyza/ontology/social#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.eap.gr/gyza/ontology/social">
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="&social;hasOwner">
+        <owl:inverseOf rdf:resource="&social;owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#owner -->
+
+    <owl:ObjectProperty rdf:about="&social;owner">
+        <rdfs:domain rdf:resource="&social;Friend"/>
+        <rdfs:range rdf:resource="&social;Message"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#post_to -->
+
+    <owl:ObjectProperty rdf:about="&social;post_to">
+        <rdfs:domain rdf:resource="&social;Post"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#posts -->
+
+    <owl:ObjectProperty rdf:about="&social;posts">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="foaf:Person"/>
+        <rdfs:range rdf:resource="&social;Post"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/account -->
+
+    <rdf:Description rdf:about="&foaf;account">
+        <rdfs:range rdf:resource="foaf:OnlineAccount"/>
+        <rdfs:domain rdf:resource="foaf:Person"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/knows -->
+
+    <owl:ObjectProperty rdf:about="&foaf;knows">
+        <rdfs:domain rdf:resource="foaf:Person"/>
+        <rdfs:range rdf:resource="&social;Friend"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#interestText -->
+
+    <owl:DatatypeProperty rdf:about="&social;interestText">
+        <rdfs:domain rdf:resource="&social;Interest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#messageText -->
+
+    <owl:DatatypeProperty rdf:about="&social;messageText">
+        <rdfs:domain rdf:resource="&social;Message"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#postText -->
+
+    <owl:DatatypeProperty rdf:about="&social;postText">
+        <rdfs:domain rdf:resource="&social;Post"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/accountName -->
+
+    <rdf:Description rdf:about="&foaf;accountName">
+        <rdfs:domain rdf:resource="foaf:OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <rdf:Description rdf:about="&foaf;firstName">
+        <rdfs:domain rdf:resource="&social;Friend"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/gender -->
+
+    <rdf:Description rdf:about="&foaf;gender">
+        <rdfs:domain rdf:resource="&social;Friend"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastName -->
+
+    <rdf:Description rdf:about="&foaf;lastName">
+        <rdfs:domain rdf:resource="&social;Friend"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- foaf:Agent -->
+
+    <owl:Class rdf:about="foaf:Agent"/>
+    
+
+
+    <!-- foaf:OnlineAccount -->
+
+    <owl:Class rdf:about="foaf:OnlineAccount"/>
+    
+
+
+    <!-- foaf:Person -->
+
+    <owl:Class rdf:about="foaf:Person">
+        <rdfs:subClassOf rdf:resource="foaf:Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#EducationFriend -->
+
+    <owl:Class rdf:about="&social;EducationFriend">
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#EducationInterest -->
+
+    <owl:Class rdf:about="&social;EducationInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#EducationMessage -->
+
+    <owl:Class rdf:about="&social;EducationMessage">
+        <rdfs:subClassOf rdf:resource="&social;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#FoodAndDrinkFriend -->
+
+    <owl:Class rdf:about="&social;FoodAndDrinkFriend">
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#FoodAndDrinkInterest -->
+
+    <owl:Class rdf:about="&social;FoodAndDrinkInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#FoodAndDrinkMessage -->
+
+    <owl:Class rdf:about="&social;FoodAndDrinkMessage">
+        <rdfs:subClassOf rdf:resource="&social;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Friend -->
+
+    <owl:Class rdf:about="&social;Friend">
+        <rdfs:subClassOf rdf:resource="foaf:Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#HealthFriend -->
+
+    <owl:Class rdf:about="&social;HealthFriend">
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#HealthInterest -->
+
+    <owl:Class rdf:about="&social;HealthInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#HealthMessage -->
+
+    <owl:Class rdf:about="&social;HealthMessage">
+        <rdfs:subClassOf rdf:resource="&social;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Interest -->
+
+    <owl:Class rdf:about="&social;Interest"/>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Message -->
+
+    <owl:Class rdf:about="&social;Message"/>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#MusicFriend -->
+
+    <owl:Class rdf:about="&social;MusicFriend">
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#MusicInterest -->
+
+    <owl:Class rdf:about="&social;MusicInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#MusicMessage -->
+
+    <owl:Class rdf:about="&social;MusicMessage">
+        <rdfs:subClassOf rdf:resource="&social;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Post -->
+
+    <owl:Class rdf:about="&social;Post"/>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#ScienceFriend -->
+
+    <owl:Class rdf:about="&social;ScienceFriend">
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#ScienceInterest -->
+
+    <owl:Class rdf:about="&social;ScienceInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#ScienceMessage -->
+
+    <owl:Class rdf:about="&social;ScienceMessage">
+        <rdfs:subClassOf rdf:resource="&social;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#SportFriend -->
+
+    <owl:Class rdf:about="&social;SportFriend">
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#SportInterest -->
+
+    <owl:Class rdf:about="&social;SportInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#SportMessage -->
+
+    <owl:Class rdf:about="&social;SportMessage">
+        <rdfs:subClassOf rdf:resource="&social;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#UnspecifiedFriend -->
+
+    <owl:Class rdf:about="&social;UnspecifiedFriend">
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#InterestEdu1 -->
+
+    <owl:NamedIndividual rdf:about="&social;InterestEdu1">
+        <rdf:type rdf:resource="&social;EducationInterest"/>
+        <social:interestText rdf:datatype="&xsd;string"> teacher</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">classroom</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">kindergarten</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">learning</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">lesson</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">school</social:interestText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#InterestFD1 -->
+
+    <owl:NamedIndividual rdf:about="&social;InterestFD1">
+        <rdf:type rdf:resource="&social;FoodAndDrinkInterest"/>
+        <social:interestText rdf:datatype="&xsd;string">Banana</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">drink</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">food</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">tequila </social:interestText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#InterestHealth1 -->
+
+    <owl:NamedIndividual rdf:about="&social;InterestHealth1">
+        <rdf:type rdf:resource="&social;HealthInterest"/>
+        <social:interestText rdf:datatype="&xsd;string">Diabetes</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">Melanomas</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">health</social:interestText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#InterestMusic1 -->
+
+    <owl:NamedIndividual rdf:about="&social;InterestMusic1">
+        <rdf:type rdf:resource="&social;MusicInterest"/>
+        <social:interestText rdf:datatype="&xsd;string">Show</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">album</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">artist</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">music</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">record</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">song</social:interestText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#InterestSc1 -->
+
+    <owl:NamedIndividual rdf:about="&social;InterestSc1">
+        <rdf:type rdf:resource="&social;ScienceInterest"/>
+        <social:interestText rdf:datatype="&xsd;string">Robots</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">science</social:interestText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#InterestSp1 -->
+
+    <owl:NamedIndividual rdf:about="&social;InterestSp1">
+        <rdf:type rdf:resource="&social;SportInterest"/>
+        <social:interestText rdf:datatype="&xsd;string">football</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">gym</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">push-ups</social:interestText>
+        <social:interestText rdf:datatype="&xsd;string">sport</social:interestText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&social;EducationInterest"/>
+            <rdf:Description rdf:about="&social;FoodAndDrinkInterest"/>
+            <rdf:Description rdf:about="&social;HealthInterest"/>
+            <rdf:Description rdf:about="&social;MusicInterest"/>
+            <rdf:Description rdf:about="&social;ScienceInterest"/>
+            <rdf:Description rdf:about="&social;SportInterest"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#x">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#y">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#a">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#z">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#f">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;Friend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;SportMessage"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;owner"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;SportFriend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;HealthMessage"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;owner"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;Friend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;HealthFriend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;SportMessage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;Message"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;SportInterest"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="&swrlb;containsIgnoreCase"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="urn:swrl#z"/>
+                                                            <rdf:Description rdf:about="urn:swrl#a"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&social;messageText"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;interestText"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;ScienceMessage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;interestText"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="&swrlb;containsIgnoreCase"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="urn:swrl#z"/>
+                                                            <rdf:Description rdf:about="urn:swrl#a"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&social;messageText"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;ScienceInterest"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;Message"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;Friend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;MusicMessage"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;owner"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;MusicFriend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;ScienceFriend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;ScienceMessage"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;owner"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;Friend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;EducationMessage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;EducationInterest"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="&swrlb;containsIgnoreCase"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="urn:swrl#z"/>
+                                                            <rdf:Description rdf:about="urn:swrl#a"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&social;messageText"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;interestText"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;Message"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;HealthMessage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&social;messageText"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="&swrlb;containsIgnoreCase"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="urn:swrl#z"/>
+                                                            <rdf:Description rdf:about="urn:swrl#a"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;interestText"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;Message"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;HealthInterest"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;interestText"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&social;messageText"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="&swrlb;containsIgnoreCase"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="urn:swrl#z"/>
+                                                            <rdf:Description rdf:about="urn:swrl#a"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;Message"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;FoodAndDrinkInterest"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;FoodAndDrinkMessage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;FoodAndDrinkMessage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;Friend"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;owner"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;FoodAndDrinkFriend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#f"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;owner"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;Friend"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;EducationMessage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;EducationFriend"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&social;messageText"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="&swrlb;containsIgnoreCase"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="urn:swrl#z"/>
+                                                            <rdf:Description rdf:about="urn:swrl#a"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&social;interestText"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&social;MusicInterest"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;Message"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&social;MusicMessage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,884 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY social "http://www.eap.gr/gyza/ontology/social#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology#"
+     xml:base="http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:social="http://www.eap.gr/gyza/ontology/social#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.eap.gr/gyza/ontology/social">
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#contains -->
+
+    <owl:ObjectProperty rdf:about="&social;contains">
+        <rdfs:range rdf:resource="&social;Interest"/>
+        <rdfs:domain rdf:resource="&social;Message"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&social;messageText"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#hasInterest -->
+
+    <owl:ObjectProperty rdf:about="&social;hasInterest">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="foaf:Group"/>
+        <rdfs:range rdf:resource="&social;Interest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#hasMember -->
+
+    <owl:ObjectProperty rdf:about="&social;hasMember">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;EducationGroup"/>
+                    <rdf:Description rdf:about="&social;FoodAndDrinkGroup"/>
+                    <rdf:Description rdf:about="&social;HealthGroup"/>
+                    <rdf:Description rdf:about="&social;MusicGroup"/>
+                    <rdf:Description rdf:about="&social;ScienceGroup"/>
+                    <rdf:Description rdf:about="&social;SportGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;EducationFriend"/>
+                    <rdf:Description rdf:about="&social;FoodAndDrinkFriend"/>
+                    <rdf:Description rdf:about="&social;HealthFriend"/>
+                    <rdf:Description rdf:about="&social;MusicFriend"/>
+                    <rdf:Description rdf:about="&social;ScienceFriend"/>
+                    <rdf:Description rdf:about="&social;SportFriend"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="&social;hasOwner">
+        <owl:inverseOf rdf:resource="&social;owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#has_interest -->
+
+    <owl:ObjectProperty rdf:about="&social;has_interest">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;EducationInterest"/>
+                    <rdf:Description rdf:about="&social;FoodAndDrinkInterest"/>
+                    <rdf:Description rdf:about="&social;HealthInterest"/>
+                    <rdf:Description rdf:about="&social;MusicInterest"/>
+                    <rdf:Description rdf:about="&social;ScienceInterest"/>
+                    <rdf:Description rdf:about="&social;SportInterest"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;EducationGroup"/>
+                    <rdf:Description rdf:about="&social;FoodAndDrinkGroup"/>
+                    <rdf:Description rdf:about="&social;HealthGroup"/>
+                    <rdf:Description rdf:about="&social;MusicGroup"/>
+                    <rdf:Description rdf:about="&social;ScienceGroup"/>
+                    <rdf:Description rdf:about="&social;SportGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="&social;isMemberOf">
+        <rdfs:range rdf:resource="foaf:Group"/>
+        <rdfs:domain rdf:resource="&social;Friend"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#is_in_group -->
+
+    <owl:ObjectProperty rdf:about="&social;is_in_group"/>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#likes -->
+
+    <owl:ObjectProperty rdf:about="&social;likes">
+        <rdfs:domain rdf:resource="&social;Friend"/>
+        <rdfs:range rdf:resource="&social;Interest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#owner -->
+
+    <owl:ObjectProperty rdf:about="&social;owner">
+        <rdfs:domain rdf:resource="&social;Friend"/>
+        <rdfs:range rdf:resource="&social;Message"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#post_to -->
+
+    <owl:ObjectProperty rdf:about="&social;post_to">
+        <rdfs:range rdf:resource="foaf:Group"/>
+        <rdfs:domain rdf:resource="&social;Post"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#posts -->
+
+    <owl:ObjectProperty rdf:about="&social;posts">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="foaf:Person"/>
+        <rdfs:range rdf:resource="&social;Post"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/account -->
+
+    <rdf:Description rdf:about="&foaf;account">
+        <rdfs:range rdf:resource="foaf:OnlineAccount"/>
+        <rdfs:domain rdf:resource="foaf:Person"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/knows -->
+
+    <owl:ObjectProperty rdf:about="&foaf;knows">
+        <rdfs:domain rdf:resource="foaf:Person"/>
+        <rdfs:range rdf:resource="&social;Friend"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/made -->
+
+    <rdf:Description rdf:about="&foaf;made">
+        <rdfs:range rdf:resource="foaf:Group"/>
+        <rdfs:domain rdf:resource="foaf:Person"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/member -->
+
+    <rdf:Description rdf:about="&foaf;member">
+        <rdfs:domain rdf:resource="foaf:Group"/>
+        <rdfs:range rdf:resource="&social;Friend"/>
+        <owl:inverseOf rdf:resource="&social;isMemberOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#artist -->
+
+    <owl:DatatypeProperty rdf:about="&social;artist">
+        <rdfs:domain rdf:resource="&social;MusicInterest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#food -->
+
+    <owl:DatatypeProperty rdf:about="&social;food">
+        <rdfs:domain rdf:resource="&social;FoodAndDrinkInterest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#genre -->
+
+    <owl:DatatypeProperty rdf:about="&social;genre">
+        <rdfs:domain rdf:resource="&social;MusicInterest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#instrument -->
+
+    <owl:DatatypeProperty rdf:about="&social;instrument">
+        <rdfs:domain rdf:resource="&social;MusicInterest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#interestText -->
+
+    <owl:DatatypeProperty rdf:about="&social;interestText">
+        <rdfs:domain rdf:resource="&social;Interest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#messageText -->
+
+    <owl:DatatypeProperty rdf:about="&social;messageText">
+        <rdfs:domain rdf:resource="&social;Message"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#postText -->
+
+    <owl:DatatypeProperty rdf:about="&social;postText">
+        <rdfs:domain rdf:resource="&social;Post"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <rdf:Description rdf:about="&foaf;firstName">
+        <rdfs:domain rdf:resource="&social;Friend"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- foaf:Agent -->
+
+    <owl:Class rdf:about="foaf:Agent"/>
+    
+
+
+    <!-- foaf:Group -->
+
+    <owl:Class rdf:about="foaf:Group">
+        <rdfs:subClassOf rdf:resource="foaf:Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- foaf:OnlineAccount -->
+
+    <owl:Class rdf:about="foaf:OnlineAccount"/>
+    
+
+
+    <!-- foaf:Person -->
+
+    <owl:Class rdf:about="foaf:Person">
+        <owl:equivalentClass rdf:resource="&social;Friend"/>
+        <rdfs:subClassOf rdf:resource="foaf:Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#EducationFriend -->
+
+    <owl:Class rdf:about="&social;EducationFriend">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;Friend"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;likes"/>
+                        <owl:someValuesFrom rdf:resource="&social;EducationInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#EducationGroup -->
+
+    <owl:Class rdf:about="&social;EducationGroup">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="foaf:Group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;hasInterest"/>
+                        <owl:allValuesFrom rdf:resource="&social;EducationInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="foaf:Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&foaf;member"/>
+                <owl:someValuesFrom rdf:resource="&social;EducationFriend"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#EducationInterest -->
+
+    <owl:Class rdf:about="&social;EducationInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#FoodAndDrinkFriend -->
+
+    <owl:Class rdf:about="&social;FoodAndDrinkFriend">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;Friend"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;likes"/>
+                        <owl:someValuesFrom rdf:resource="&social;FoodAndDrinkInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&social;FoodAndDrinkGroup"/>
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#FoodAndDrinkGroup -->
+
+    <owl:Class rdf:about="&social;FoodAndDrinkGroup">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="foaf:Group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;hasInterest"/>
+                        <owl:allValuesFrom rdf:resource="&social;FoodAndDrinkInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="foaf:Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#FoodAndDrinkInterest -->
+
+    <owl:Class rdf:about="&social;FoodAndDrinkInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Friend -->
+
+    <owl:Class rdf:about="&social;Friend">
+        <rdfs:subClassOf rdf:resource="foaf:Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#HealthFriend -->
+
+    <owl:Class rdf:about="&social;HealthFriend">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;Friend"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;likes"/>
+                        <owl:someValuesFrom rdf:resource="&social;HealthInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#HealthGroup -->
+
+    <owl:Class rdf:about="&social;HealthGroup">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="foaf:Group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;hasInterest"/>
+                        <owl:allValuesFrom rdf:resource="&social;HealthInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="foaf:Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#HealthInterest -->
+
+    <owl:Class rdf:about="&social;HealthInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Interest -->
+
+    <owl:Class rdf:about="&social;Interest"/>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Message -->
+
+    <owl:Class rdf:about="&social;Message"/>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#MusicFriend -->
+
+    <owl:Class rdf:about="&social;MusicFriend">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;Friend"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;likes"/>
+                        <owl:someValuesFrom rdf:resource="&social;MusicInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#MusicGroup -->
+
+    <owl:Class rdf:about="&social;MusicGroup">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="foaf:Group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;hasInterest"/>
+                        <owl:allValuesFrom rdf:resource="&social;MusicInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="foaf:Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#MusicInterest -->
+
+    <owl:Class rdf:about="&social;MusicInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Post -->
+
+    <owl:Class rdf:about="&social;Post"/>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#ScienceFriend -->
+
+    <owl:Class rdf:about="&social;ScienceFriend">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;Friend"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;likes"/>
+                        <owl:someValuesFrom rdf:resource="&social;ScienceInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#ScienceGroup -->
+
+    <owl:Class rdf:about="&social;ScienceGroup">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="foaf:Group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;hasInterest"/>
+                        <owl:allValuesFrom rdf:resource="&social;ScienceInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="foaf:Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#ScienceInterest -->
+
+    <owl:Class rdf:about="&social;ScienceInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#SportFriend -->
+
+    <owl:Class rdf:about="&social;SportFriend">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&social;Friend"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;likes"/>
+                        <owl:someValuesFrom rdf:resource="&social;SportInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&social;likes"/>
+                <owl:someValuesFrom rdf:resource="&social;SportInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#SportGroup -->
+
+    <owl:Class rdf:about="&social;SportGroup">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="foaf:Group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&social;hasInterest"/>
+                        <owl:allValuesFrom rdf:resource="&social;SportInterest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="foaf:Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#SportInterest -->
+
+    <owl:Class rdf:about="&social;SportInterest">
+        <rdfs:subClassOf rdf:resource="&social;Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#UnspecifiedFriend -->
+
+    <owl:Class rdf:about="&social;UnspecifiedFriend">
+        <rdfs:subClassOf rdf:resource="&social;Friend"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#EducationGroup1 -->
+
+    <owl:NamedIndividual rdf:about="&social;EducationGroup1">
+        <rdf:type rdf:resource="foaf:Group"/>
+        <social:hasInterest rdf:resource="&social;Interest3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#FoodGroup1 -->
+
+    <owl:NamedIndividual rdf:about="&social;FoodGroup1">
+        <rdf:type rdf:resource="foaf:Group"/>
+        <social:hasInterest rdf:resource="&social;Interest2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Friend1 -->
+
+    <owl:NamedIndividual rdf:about="&social;Friend1">
+        <rdf:type rdf:resource="&social;Friend"/>
+        <foaf:firstName rdf:datatype="&xsd;string">Maria</foaf:firstName>
+        <social:likes rdf:resource="&social;Interest1"/>
+        <social:likes rdf:resource="&social;Interest2"/>
+        <social:owner rdf:resource="&social;Message1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Friend2 -->
+
+    <owl:NamedIndividual rdf:about="&social;Friend2">
+        <rdf:type rdf:resource="&social;Friend"/>
+        <foaf:firstName rdf:datatype="&xsd;string">Yannis</foaf:firstName>
+        <social:likes rdf:resource="&social;Interest2"/>
+        <social:likes rdf:resource="&social;Interest3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Friend3 -->
+
+    <owl:NamedIndividual rdf:about="&social;Friend3">
+        <rdf:type rdf:resource="&social;Friend"/>
+        <foaf:firstName>Eleni</foaf:firstName>
+        <social:likes rdf:resource="&social;Interest1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Friend4 -->
+
+    <owl:NamedIndividual rdf:about="&social;Friend4">
+        <rdf:type rdf:resource="&social;Friend"/>
+        <social:likes rdf:resource="&social;Interest3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Friend5 -->
+
+    <owl:NamedIndividual rdf:about="&social;Friend5">
+        <rdf:type rdf:resource="&social;Friend"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="&social;Friend5"/>
+        <owl:targetIndividual rdf:resource="&social;Interest2"/>
+        <owl:assertionProperty rdf:resource="&social;likes"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="&social;Friend5"/>
+        <owl:targetIndividual rdf:resource="&social;Interest3"/>
+        <owl:assertionProperty rdf:resource="&social;likes"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="&social;Friend5"/>
+        <owl:targetIndividual rdf:resource="&social;Interest1"/>
+        <owl:assertionProperty rdf:resource="&social;likes"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Friend6 -->
+
+    <owl:NamedIndividual rdf:about="&social;Friend6">
+        <rdf:type rdf:resource="&social;Friend"/>
+        <social:owner rdf:resource="&social;Message3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Interest1 -->
+
+    <owl:NamedIndividual rdf:about="&social;Interest1">
+        <rdf:type rdf:resource="&social;MusicInterest"/>
+        <social:artist rdf:datatype="&xsd;string">Bono</social:artist>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Interest2 -->
+
+    <owl:NamedIndividual rdf:about="&social;Interest2">
+        <rdf:type rdf:resource="&social;FoodAndDrinkInterest"/>
+        <social:interestText rdf:datatype="&xsd;string">banana</social:interestText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Interest3 -->
+
+    <owl:NamedIndividual rdf:about="&social;Interest3">
+        <rdf:type rdf:resource="&social;EducationInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Message1 -->
+
+    <owl:NamedIndividual rdf:about="&social;Message1">
+        <rdf:type rdf:resource="&social;Message"/>
+        <social:messageText rdf:datatype="&xsd;string">hello banana</social:messageText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Message2 -->
+
+    <owl:NamedIndividual rdf:about="&social;Message2">
+        <rdf:type rdf:resource="&social;Message"/>
+        <social:interestText rdf:datatype="&xsd;string">1ban</social:interestText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Message3 -->
+
+    <owl:NamedIndividual rdf:about="&social;Message3">
+        <rdf:type rdf:resource="&social;Message"/>
+        <social:messageText rdf:datatype="&xsd;string">sss banana sss</social:messageText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#MusicGroup1 -->
+
+    <owl:NamedIndividual rdf:about="&social;MusicGroup1">
+        <rdf:type rdf:resource="foaf:Group"/>
+        <social:hasInterest rdf:resource="&social;Interest1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#Post1 -->
+
+    <owl:NamedIndividual rdf:about="&social;Post1">
+        <rdf:type rdf:resource="&social;Post"/>
+        <social:postText>Do you like music?</social:postText>
+        <social:post_to rdf:resource="&social;MusicGroup1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eap.gr/gyza/ontology/social#User -->
+
+    <owl:NamedIndividual rdf:about="&social;User">
+        <rdf:type rdf:resource="foaf:Person"/>
+        <foaf:firstName rdf:datatype="&xsd;string">Georgia</foaf:firstName>
+        <foaf:lastName rdf:datatype="&xsd;string">Nikolakopoulou</foaf:lastName>
+        <foaf:knows rdf:resource="&social;Friend2"/>
+        <foaf:knows rdf:resource="&social;Friend3"/>
+        <social:posts rdf:resource="&social;Post1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&social;EducationInterest"/>
+            <rdf:Description rdf:about="&social;FoodAndDrinkInterest"/>
+            <rdf:Description rdf:about="&social;HealthInterest"/>
+            <rdf:Description rdf:about="&social;MusicInterest"/>
+            <rdf:Description rdf:about="&social;ScienceInterest"/>
+            <rdf:Description rdf:about="&social;SportInterest"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

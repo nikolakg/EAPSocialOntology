@@ -35,4 +35,18 @@
                 <goal>clean:clean</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-package</actionName>
+            <displayName>package</displayName>
+            <goals>
+                <goal>package</goal>
+            </goals>
+        </action>
+         <action>
+            <actionName>CUSTOM-tomcat7:redeploy</actionName>
+            <displayName>tomcat7:redeploy</displayName>
+            <goals>
+                <goal>tomcat7:redeploy</goal>
+            </goals>
+        </action>
     </actions>

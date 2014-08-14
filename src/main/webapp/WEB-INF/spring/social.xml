@@ -23,6 +23,7 @@
 
 	<social:jdbc-connection-repository/>	
 	<bean id="userIdSource" class="org.springframework.social.security.AuthenticationNameUserIdSource" />
+        <bean id="ontology" class="eu.gyza.eap.eapsocialontology.ontology.SocialOntology" />
 
  	<bean id="connectController" class="org.springframework.social.connect.web.ConnectController" autowire="constructor">
 		<property name="connectInterceptors">

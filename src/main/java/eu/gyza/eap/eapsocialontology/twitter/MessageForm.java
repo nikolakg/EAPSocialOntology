@@ -19,6 +19,7 @@ public class MessageForm {
 	
 	private String to;
 	
+        
 	private String text;
 
         private String friend;

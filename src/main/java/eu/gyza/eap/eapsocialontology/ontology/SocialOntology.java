@@ -129,11 +129,16 @@ public class SocialOntology {
     
     }
 
-    public void loadModel( Twitter twitter) throws UnsupportedEncodingException {
+    public void loadModel( Twitter twitter) {
         List<Tweet> tweetList = twitter.timelineOperations().getHomeTimeline(100); 
         InputStream inputStream = 
             getClass().getClassLoader().getResourceAsStream(ontologyResource);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream ,"UTF-8"));
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new InputStreamReader(inputStream ,"UTF-8"));
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(SocialOntology.class.getName()).log(Level.SEVERE, null, ex);
+        }
         OntModel base = ModelFactory.createOntologyModel(OWL_MEM);
         base.read(reader, "RDF/XML");
        

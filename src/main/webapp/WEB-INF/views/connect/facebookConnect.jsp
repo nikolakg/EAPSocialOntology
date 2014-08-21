@@ -6,15 +6,14 @@
 <%@ page session="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<%// <h3>Connect to Facebook</h3> %>
-<h3>Συνδεθήκατε στο  Facebook</h3>
+<h3>Connect to Facebook</h3> 
 
 <form action="<c:url value="/connect/facebook" />" method="POST">
 	<input type="hidden" name="scope" value="publish_actions,user_friends,read_friendlists,read_stream,user_photos,offline_access" />
 	<div class="formInfo">
-		<%// <p>You aren't connected to Facebook yet. Click the button to connect EAP Social Ontology with your Facebook account.</p> %>
-                <p>Δεν είσαστε συνδεδεμένοι στο Facebook. Πατήστε το κουμπί ώστε να συνδεθεί η εφραμογή με τον λογαριασμό σας στο Facebook.</p>
+		<p>You aren't connected to Facebook yet. Click the button to connect EAP Social Ontology with your Facebook account.</p>
+              
 	</div>
-	<p><button type="submit"><img src="<c:url value="/resources/social/facebook/connect_light_medium_short.gif" />"/></button></p>
+	<p><button type="submit"><img src="<c:url value="/resources/social/twitter/connect_light_medium_short.gif" />"/></button></p>
 	<%// label for="postToWall"><input id="postToWall" type="checkbox" name="postToWall" /> Tell your friends about EAP Social Ontology on your Facebook wall</label //%>    
 </form>

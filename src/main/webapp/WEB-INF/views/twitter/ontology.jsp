@@ -67,3 +67,5 @@ Sport Friends are:
 	<input type="submit" value="Post Tweet"/>
 </form>
 </sf:form>
+<p/>&nbsp;
+<p/>&nbsp;

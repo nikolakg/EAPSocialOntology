@@ -16,15 +16,18 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 import eu.gyza.eap.eapsocialontology.twitter.TwitterOntologyController;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.inject.Inject;
 import org.mindswap.pellet.jena.PelletReasonerFactory;
 import org.springframework.social.twitter.api.Tweet;
 import org.springframework.social.twitter.api.Twitter;
@@ -102,18 +105,21 @@ public class SocialOntology {
     
     public void save() {
           String fileName = "new_"+ontologyResource;
-        FileWriter out = null;
+       // FileWriter out = null;
+        Writer out2 = null;
         try {
-            out = new FileWriter( fileName );
+          //  out = new FileWriter( fileName );
+            out2 = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream(fileName), "UTF-8"));  
         } catch (IOException ex) {
             Logger.getLogger(TwitterOntologyController.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
-            infOntModel.write( out, "RDF/XML" );
+            infOntModel.write( out2, "RDF/XML" );
         }
         finally {
            try {
-               out.close();
+               out2.close();
            }
            catch (IOException closeException) {
                // ignore

@@ -69,6 +69,17 @@ public class SocialOntology {
         }
         return infOntModel.listIndividuals(foodFiendResouce);
     }
+    
+     public Iterator<Individual> getSportFiends() {
+        Resource sportFiendResouce = infOntModel.getResource(NS + "SportFriend");
+
+        for (Iterator<Individual> i = infOntModel.listIndividuals(sportFiendResouce); i.hasNext();) {   
+            Individual o = i.next();
+            System.out.println(o.getLocalName()+ " is SportFriend" );
+        }
+        return infOntModel.listIndividuals(sportFiendResouce);
+    }
+    
     public Iterator<Individual> getHealthFriends() {
         Resource foodFiendResouce = infOntModel.getResource(NS + "HealthFriend");
 

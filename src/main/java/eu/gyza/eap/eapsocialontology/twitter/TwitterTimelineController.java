@@ -68,25 +68,31 @@ public class TwitterTimelineController {
     @RequestMapping(value = "/twitter/owltweet", method = RequestMethod.POST)
     public String postOwlTweet(MessageForm message) {
         Iterator<Individual> friends = null;
-        if ("eduFriends".equals(message.getFriend())) {
+        if ("scienceFriends".equals(message.getFriend())) {
             friends = ontology.getScienceFriends();
         } else if ("healthFriends".equals(message.getFriend())) {
             friends = ontology.getHealthFriends();
-        } else if ("muscFriends".equals(message.getFriend())) {
+        } else if ("musicFriends".equals(message.getFriend())) {
             friends = ontology.getMusicFiends();
         } else if ("foodFriends".equals(message.getFriend())) {
             friends = ontology.getFoodFiends();
         } else if ("eduFriends".equals(message.getFriend())) {
             friends = ontology.getEduFiends();
+        }   else if ("sportFriends".equals(message.getFriend())) {
+            friends = ontology.getSportFiends();
+        } else {
+            friends = null;
         }
+        if (friends!=null){
+            for (Iterator<Individual> i = friends; i.hasNext();) {
 
-        for (Iterator<Individual> i = friends; i.hasNext();) {
-            Individual o = i.next();
-            twitter.timelineOperations().updateStatus("@" + o.getLocalName() + " " + message.getText()+   
-                " #"+message.getFriend());
-            }
-           
-            return "redirect:/twitter/timeline";
+                Individual o = i.next();
+                System.out.print("Sending message to "+o.getLocalName());
+                twitter.timelineOperations().updateStatus("@" + o.getLocalName() + " " + message.getText()+   
+                    " #"+message.getFriend());
+                }
+        }
+        return "redirect:/twitter/timeline";
     }
 
 }

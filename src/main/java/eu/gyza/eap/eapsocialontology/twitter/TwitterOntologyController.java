@@ -68,6 +68,7 @@ public class TwitterOntologyController {
         model.addAttribute("foodFriends", ontology.getFoodFiends());
         model.addAttribute("eduFriends", ontology.getEduFiends());
         model.addAttribute("healthFriends", ontology.getHealthFriends());
+        model.addAttribute("sportFriends", ontology.getSportFiends());
         model.addAttribute("messageForm", new MessageForm());
         ontology.save();        
         return "twitter/ontology";

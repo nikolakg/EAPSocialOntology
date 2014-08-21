@@ -37,10 +37,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.mindswap.pellet.jena.PelletReasonerFactory;
 
-/**
- *
- * @author ydespotopoulos
- */
+
 public class JenaMainTest {
 
     static String personURI = "http://somewhere/JohnSmith";

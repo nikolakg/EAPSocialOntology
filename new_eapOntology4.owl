@@ -13,26 +13,22 @@
     xmlns="http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg9">
-    <social:messageText>Watch Arcade Fire get self-reflexive in their surprise new video for "You Already Know" http://t.co/r6Qx3YoWFx</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>@Reuters_Health Test  #foodFriends</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#nikolakge"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A0">
-    <rdf:first rdf:nodeID="A1"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:argument2 rdf:resource="urn:swrl#a"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Post">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg72">
-    <social:messageText>U.S. announces new procedures for detecting unsafe ground beef http://t.co/GxzwmURXP2</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>For diabetics, losing weight may delay kidney problems http://t.co/EOH9sJbwOX</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/geekcode">
@@ -46,29 +42,25 @@
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg43">
-    <social:messageText>DSM-5 PTSD Criteria Questioned in Study (CME/CE) http://t.co/kh4x7IJsNc</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>E????? - ???? ?????? ?? ????????? ?????????? ??? ???? ?? ??????????: ??? ?? ?????????… http://t.co/qdWpZMv7sH</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#lifomag"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:first rdf:nodeID="A4"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first rdf:nodeID="A3"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
+  <rdf:Description rdf:nodeID="A4">
+    <swrl:argument2 rdf:resource="urn:swrl#y"/>
     <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg82">
-    <social:messageText>Consignment of experimental Ebola drug arrives in Liberia http://t.co/X62yDyMYtC</social:messageText>
+    <social:messageText>More medics urgently needed to fight West Africa Ebola: experts http://t.co/NfNSloUdhB</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineAccount">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -92,12 +84,17 @@
     <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg33">
-    <social:messageText>I do a variation of Paleo called Time Machine Paleo. You can have anything a caveman sent into the future would've eaten. Like potato chips</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#foodwishes"/>
+    <social:messageText>E????? - 17?????? ???????????? ??? ??????????? ????????: ??? ?? ????????? http://t.co/FndImFHTJg</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#lifomag"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <swrl:body rdf:nodeID="A6"/>
+    <swrl:head rdf:nodeID="A7"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg83">
-    <social:messageText>Fish-eaters may keep more gray matter in old age http://t.co/u7DVA7SvZW</social:messageText>
+    <social:messageText>For older women, working out may keep heart rates regular http://t.co/Z2z2pl3ASg</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
@@ -106,14 +103,9 @@
     <dc:title>Friend of a Friend (FOAF) vocabulary</dc:title>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <swrl:body rdf:nodeID="A8"/>
-    <swrl:head rdf:nodeID="A0"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg73">
-    <social:messageText>Justin Bieber has pleaded guilty to reckless driving in Miami and must take an anger management course: http://t.co/zV7Ukp9QDj</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>RT @HeidiHutchison: I created #GlobalVoxers sheet to create PLN for all interested in global proj.s for stds. JOIN http://t.co/dadpNdwk4l</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#InterestSc1">
@@ -121,11 +113,6 @@
     <social:interestText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robots</social:interestText>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceInterest"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceInterest"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/workInfoHomepage">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -137,50 +124,37 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkInterest"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg42">
-    <social:messageText>#ICYMI Duran Duran's David Lynch-directed film will hit theaters for the first time for one night only: http://t.co/aPoXrMXF1k</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>??????? - ???????? ?????? ????? ??? ??????? ??????? ???? ?? ??? ?????????: ? ???????… http://t.co/CnWo7XWCP8</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#lifomag"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <swrl:argument2 rdf:resource="urn:swrl#y"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  <rdf:Description rdf:nodeID="A8">
+    <swrl:head rdf:nodeID="A9"/>
+    <swrl:body rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <rdf:rest rdf:nodeID="A13"/>
-    <rdf:first rdf:nodeID="A14"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#8Amber8">
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg32">
-    <social:messageText>Four Ways to Save Space When Setting Up a Classroom http://t.co/QxmNZUANyM via @edrethink</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#flourishingkids"/>
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <swrl:arguments rdf:nodeID="A16"/>
-    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg84">
-    <social:messageText>Michael Cera quietly released a folky solo album. Listen to it here: http://t.co/LgkdLTUGIC</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
+  <rdf:Description rdf:nodeID="A10">
     <swrl:argument1 rdf:resource="urn:swrl#x"/>
     <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg32">
+    <social:messageText>Doctors Without Borders makes a plea for more help in Ebola outbreak http://t.co/YaRuNeW678  @MSF_USA</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#TIMEHealth"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg84">
+    <social:messageText>More medics urgently needed to fight West Africa Ebola: experts http://t.co/gt3pchPJug</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg7">
-    <social:messageText>Nick Carter and Jordan Knight open up about their boy-band breakout: inside their album, tour and more http://t.co/9h8hiJ2Vuw</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>@Amber8 hi #eduFriends</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#nikolakge"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#SportInterest">
@@ -188,10 +162,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#SportFriend">
-    <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#HealthFriend">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
@@ -205,6 +175,15 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#HealthFriend">
+    <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationFriend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/logo">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
@@ -216,11 +195,6 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
-    <rdf:rest rdf:nodeID="A19"/>
-    <rdf:first rdf:nodeID="A20"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#InterestSp1">
     <social:interestText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sport</social:interestText>
     <social:interestText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">push-ups</social:interestText>
@@ -230,8 +204,8 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg70">
-    <social:messageText>Intel explores wearable devices for Parkinson's disease research http://t.co/hM4ovzWgcN</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>Justin Bieber and his bodyguard have been sued for assault by a paparazzo: http://t.co/yAlgZDbeHw</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
@@ -248,18 +222,21 @@
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A21">
-    <rdf:first rdf:nodeID="A22"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A12">
+    <swrl:head rdf:nodeID="A13"/>
+    <swrl:body rdf:nodeID="A14"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg45">
-    <social:messageText>Two out of five U.S. adults at risk of developing diabetes -study http://t.co/aMY9f5L8iL</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>???? ??? ??????! http://t.co/P36DX8ErtQ</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#CathyLee4Pain">
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg6">
-    <social:messageText>@muscFriends Hahaaa</social:messageText>
+    <social:messageText>@gcouros hi #eduFriends</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#nikolakge"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
@@ -274,45 +251,30 @@
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg31">
-    <social:messageText>RT @Zagat: SF's Most Under-the-Radar Italian Food 'Hood http://t.co/vrbAdhzSVo http://t.co/mD9QZxOprv</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#foodwishes"/>
+    <social:messageText>? ??????? ????? ??????! http://t.co/HzQFFX2i0E</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A23">
-    <swrl:head rdf:nodeID="A24"/>
-    <swrl:body rdf:nodeID="A25"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A26">
-    <swrl:argument2 rdf:resource="urn:swrl#y"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <rdf:rest rdf:nodeID="A27"/>
-    <rdf:first rdf:resource="urn:swrl#z"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#post_to">
     <rdfs:domain rdf:resource="http://www.eap.gr/gyza/ontology/social#Post"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg85">
-    <social:messageText>Treating cancer with bacteria shows real promise http://t.co/0FnIt2fi2s</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#TIMEHealth"/>
+    <social:messageText>For older women, working out may keep heart rates regular http://t.co/GlBNWTsada</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg8">
-    <social:messageText>What Are You Sharing? http://t.co/hL1KS7xIPx via @amandacdykes</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#flourishingkids"/>
+    <social:messageText>@mattBgomez hi #eduFriends</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#nikolakge"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A28">
-    <swrl:head rdf:nodeID="A29"/>
-    <swrl:body rdf:nodeID="A18"/>
+  <rdf:Description rdf:nodeID="A15">
+    <swrl:head rdf:nodeID="A16"/>
+    <swrl:body rdf:nodeID="A17"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/topic">
@@ -326,16 +288,18 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:first rdf:nodeID="A18"/>
+    <rdf:rest rdf:nodeID="A19"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg71">
-    <social:messageText>U.S. FDA approves Merck insomnia drug http://t.co/m5okZOxCRR</social:messageText>
+    <social:messageText>For diabetics, losing weight may delay kidney problems http://t.co/9L9DFy3cEA</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#sundaysuppers">
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg44">
-    <social:messageText>Karen O will have listening parties in fans' living rooms. Find out how you can attend: http://t.co/DLAVqyWbtn</social:messageText>
+    <social:messageText>Aaron Paul has planned an epic #BreakingBad scavenger hunt ahead of Monday's Emmy Awards: http://t.co/KYEqbPcsmm</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
@@ -349,33 +313,23 @@
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicInterest"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A25">
-    <rdf:rest rdf:nodeID="A12"/>
-    <rdf:first rdf:nodeID="A6"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#mattBgomez">
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg30">
-    <social:messageText>RT @moth: Small town police look like this now? /via http://t.co/lmFnyYMltJ http://t.co/FejjYIbXJR</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#foodwishes"/>
+    <social:messageText>"I’ve decided to have photos taken in an attempt to inspire others to do great things for fellow human beings." http://t.co/zSjRaSr0gD</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A30">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:first rdf:nodeID="A20"/>
+    <rdf:rest rdf:nodeID="A21"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A31">
-    <swrl:arguments rdf:nodeID="A32"/>
-    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A33">
-    <swrl:body rdf:nodeID="A34"/>
-    <swrl:head rdf:nodeID="A35"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:rest rdf:nodeID="A23"/>
+    <rdf:first rdf:nodeID="A24"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineEcommerceAccount">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -389,29 +343,15 @@
   <rdf:Description rdf:about="foaf:OnlineAccount">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A36">
-    <swrl:argument2 rdf:resource="urn:swrl#z"/>
+  <rdf:Description rdf:nodeID="A25">
     <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#jtimberlake">
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A19">
-    <rdf:rest rdf:nodeID="A37"/>
-    <rdf:first rdf:nodeID="A38"/>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:first rdf:nodeID="A27"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A39">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A40">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/icqChatID">
     <rdfs:label>ICQ chat ID</rdfs:label>
@@ -425,26 +365,17 @@
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A41">
-    <swrl:head rdf:nodeID="A42"/>
-    <swrl:body rdf:nodeID="A43"/>
+  <rdf:Description rdf:nodeID="A28">
+    <swrl:head rdf:nodeID="A29"/>
+    <swrl:body rdf:nodeID="A30"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A32">
-    <rdf:rest rdf:nodeID="A44"/>
-    <rdf:first rdf:resource="urn:swrl#z"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A20">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A35">
-    <rdf:first rdf:nodeID="A45"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:first rdf:nodeID="A31"/>
+    <rdf:rest rdf:nodeID="A32"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/holdsAccount">
@@ -457,10 +388,15 @@
     <vs:term_status>archaic</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A46">
-    <rdf:first rdf:nodeID="A15"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:rest rdf:nodeID="A34"/>
+    <rdf:first rdf:nodeID="A35"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <swrl:argument1 rdf:resource="urn:swrl#f"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/accountName">
     <rdfs:domain rdf:resource="foaf:OnlineAccount"/>
@@ -476,75 +412,46 @@
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#RollingStone">
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A47">
-    <rdf:rest rdf:nodeID="A48"/>
-    <rdf:first rdf:nodeID="A39"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#ScienceMessage">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A49">
-    <rdf:first rdf:nodeID="A40"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A22">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationFriend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A45">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+  <rdf:Description rdf:nodeID="A36">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
     <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#SportMessage"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A50">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:rest rdf:nodeID="A37"/>
+    <rdf:first rdf:nodeID="A38"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#greatist">
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:first rdf:nodeID="A39"/>
+    <rdf:rest rdf:nodeID="A40"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg21">
-    <social:messageText>RT @CMSexperiment: Hacking together a cloud chamber at @sciencehackday! http://t.co/4WwwvasX2Q #particlephysics #CylindricalOnion http://t.…</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#CERN"/>
+    <social:messageText>Ireland testing dead person recently in Africa for Ebola http://t.co/qv19exyHSx</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:rest rdf:nodeID="A51"/>
-    <rdf:first rdf:nodeID="A52"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A44">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="urn:swrl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A37">
-    <rdf:first rdf:nodeID="A53"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A54">
-    <rdf:first rdf:nodeID="A55"/>
-    <rdf:rest rdf:nodeID="A56"/>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:rest rdf:nodeID="A22"/>
+    <rdf:first rdf:nodeID="A42"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg60">
-    <social:messageText>U.S. advisory panel recommends Prevnar 13 vaccine for elderly http://t.co/CH8YwzXPXw</social:messageText>
+    <social:messageText>Ebola response of MSF and 'boiling frog' WHO under scrutiny http://t.co/hlt7bGsZJI</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkFriend">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A57">
-    <rdf:first rdf:nodeID="A2"/>
-    <rdf:rest rdf:nodeID="A58"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/pastProject">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -556,68 +463,48 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#SportMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
   <rdf:Description rdf:about="urn:swrl#a">
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A59">
-    <rdf:first rdf:nodeID="A60"/>
-    <rdf:rest rdf:nodeID="A54"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg80">
-    <social:messageText>U.S. announces new procedures for detecting unsafe ground beef http://t.co/fDf5Y1fe2L</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
+    <social:messageText>Behind the filth and the fury: rarely seen Sex Pistols photos: http://t.co/lJw7Qsmqia</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A61">
-    <swrl:head rdf:nodeID="A62"/>
-    <swrl:body rdf:nodeID="A47"/>
+  <rdf:Description rdf:nodeID="A43">
+    <swrl:body rdf:nodeID="A33"/>
+    <swrl:head rdf:nodeID="A44"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg41">
-    <social:messageText>Five Myths About Teacher Tenure http://t.co/V0JCLNHjlA via @edrethink</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#flourishingkids"/>
+    <social:messageText>????? / ?????? - ?????????? ???????? ??? ??????????????: ???? ?????? ??? ????? ?????????? http://t.co/526niHKCXa</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#lifomag"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A63">
-    <rdf:first rdf:nodeID="A64"/>
-    <rdf:rest rdf:nodeID="A65"/>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A26"/>
+    <rdf:first rdf:nodeID="A36"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A42">
-    <rdf:first rdf:nodeID="A50"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A38">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg20">
-    <social:messageText>Race to find an Ebola cure http://t.co/EIkJZnSYND</social:messageText>
+    <social:messageText>FDA approves use of Eliquis to treat leg, lung clots http://t.co/FMRx0SXhvw</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A34">
-    <rdf:rest rdf:nodeID="A66"/>
-    <rdf:first rdf:nodeID="A67"/>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:rest rdf:nodeID="A45"/>
+    <rdf:first rdf:nodeID="A46"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A68">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A38">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:rest rdf:nodeID="A47"/>
+    <rdf:first rdf:nodeID="A48"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/tipjar">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -630,45 +517,39 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A58">
-    <rdf:first rdf:nodeID="A9"/>
-    <rdf:rest rdf:nodeID="A69"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A56">
-    <rdf:rest rdf:nodeID="A46"/>
-    <rdf:first rdf:nodeID="A36"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <rdf:first rdf:nodeID="A70"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg61">
-    <social:messageText>A guitar autographed by Paul McCartney is now up for auction with proceeds to help save elephants: http://t.co/rjNnTcJz8q</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
+  <rdf:Description rdf:nodeID="A42">
     <swrl:argument1 rdf:resource="urn:swrl#x"/>
     <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkMessage"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <owl:members rdf:nodeID="A50"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg61">
+    <social:messageText>What do people really mean when they say, "Listen to your body"? http://t.co/8joYVrcWTk http://t.co/VGpOL4kWRR</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:first rdf:nodeID="A25"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg81">
-    <social:messageText>Johnny Marr skewers greed and dreams big on second solo LP. Read our full report from the studio: http://t.co/APEObLJ1tZ</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>?????????? - ??????????? ??? SoundCloud: ? ??????? ?????????? ????????? ?? ?????????????. http://t.co/KzQxgpZQli</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#lifomag"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg40">
-    <social:messageText>More Data in the Salt Wars (CME/CE) http://t.co/45QudlNIYU</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>??? ???????? ?????? / ??? ?????? ?????????? http://t.co/M1EXfMvq3j</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A43">
-    <rdf:first rdf:nodeID="A71"/>
-    <rdf:rest rdf:nodeID="A63"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A3">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/depiction">
     <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/depicts"/>
@@ -689,40 +570,55 @@
     <vs:term_status>stable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A72">
-    <rdf:first rdf:nodeID="A73"/>
-    <rdf:rest rdf:nodeID="A59"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A51">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#SportMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg52">
-    <social:messageText>OncoBriefs: Shingles and Chemo, Survivor Health, Lung Ca (CME/CE) http://t.co/WPYly4Dpn4</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>1,400 are dead from Ebola and we need help, says Doctors Without Borders President http://t.co/YaRuNeW678</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#TIMEHealth"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A27">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="urn:swrl#a"/>
+  <rdf:Description rdf:nodeID="A53">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg0">
-    <social:messageText>Tool's Danny Carey will fill in for Primus drummer Tim Alexander at select shows. Read Les Claypool's statement: http://t.co/XPJsf5BcfI</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>Polio vaccines more effective when they are combined http://t.co/OYEQ4w3w72</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#TIMEHealth"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg62">
-    <social:messageText>Controversial studies say lowest sodium intake may pose risks http://t.co/VOfkexDDsh</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A74">
-    <rdf:first rdf:nodeID="A75"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:first rdf:nodeID="A55"/>
+    <rdf:rest rdf:nodeID="A56"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A76">
-    <swrl:argument2 rdf:resource="urn:swrl#y"/>
+  <rdf:Description rdf:nodeID="A20">
     <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg62">
+    <social:messageText>?? ????????? ???? ???????????? / ??? ??????? ?????????? http://t.co/S7ABcXjsbM</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:first rdf:nodeID="A57"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/mbox">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -735,6 +631,11 @@
     <vs:term_status>stable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:first rdf:nodeID="A59"/>
+    <rdf:rest rdf:nodeID="A60"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -746,47 +647,70 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A71">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  <rdf:Description rdf:nodeID="A48">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicMessage"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:rest rdf:nodeID="A62"/>
+    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicInterest"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg53">
-    <social:messageText>Thanks @jimmyfallon @theroots @questlove @higbones for the #ASLIceBucketChallenge: http://t.co/CA62e0RpcE Donate! http://t.co/PXxvcfdkPS</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#jtimberlake"/>
+    <social:messageText>Greek Yiayia does #icebucketchallenge and basically challenges every person in her family. http://t.co/ul0OieAB23 cc @courosa @mcouros</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Reuters_Health">
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthInterest"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <rdf:rest rdf:nodeID="A65"/>
+    <rdf:first rdf:nodeID="A66"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg1">
-    <social:messageText>Why Robin Williams lost to depression http://t.co/1gxJEfiLtz</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>????? ??? ?? ??? ????????... ?????????? / ??? ???? ??????? http://t.co/rNJV1APm8P</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <rdf:first rdf:nodeID="A68"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:first rdf:nodeID="A69"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/wot/0.1/assurance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg63">
-    <social:messageText>Controversial studies say lowest sodium intake may pose risks http://t.co/m0b86quHNU</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
+    <social:messageText>I love this - This intensely heartfelt speech after a devastating loss is what coaching kids is all about http://t.co/MWBShvsa0a #fb</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A55">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:argument2 rdf:resource="urn:swrl#a"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  <rdf:Description rdf:nodeID="A70">
+    <swrl:head rdf:nodeID="A71"/>
+    <swrl:body rdf:nodeID="A41"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A77">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A75">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:first rdf:nodeID="A72"/>
+    <rdf:rest rdf:nodeID="A73"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/phone">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -808,14 +732,33 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A64">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicInterest"/>
+  <rdf:Description rdf:nodeID="A74">
+    <rdf:first rdf:nodeID="A11"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:first rdf:nodeID="A75"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <rdf:rest rdf:nodeID="A61"/>
+    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <rdf:first rdf:nodeID="A78"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg50">
-    <social:messageText>Want to sleep better? Work next to a window (via @Refinery29): http://t.co/yYdmpIB3nP</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
+    <social:messageText>E????? - ????????????: ''?? ???? ????????? ? 26?????? ??? ???????????? ??? ????'': ?… http://t.co/xT9TvCeG85</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#lifomag"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/schoolHomepage">
@@ -827,11 +770,6 @@
     <rdfs:label>schoolHomepage</rdfs:label>
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A60">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Message">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -845,9 +783,14 @@
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg64">
-    <social:messageText>From his pre–Mork stand-up to a 'Set List' guest appearance last year, here's a history of Robin Williams in 15 jokes http://t.co/mBrbFeTMIJ</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>A Great School http://t.co/APe6BsYBYy</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/weblog">
     <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
@@ -861,43 +804,71 @@
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A78">
-    <rdf:first rdf:nodeID="A79"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="A79">
+    <rdf:rest rdf:nodeID="A54"/>
+    <rdf:first rdf:nodeID="A80"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A80">
-    <rdf:first rdf:nodeID="A11"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A35">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationInterest"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A81">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#SportInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <rdf:rest rdf:nodeID="A84"/>
+    <rdf:first rdf:resource="urn:swrl#z"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg78">
+    <social:messageText>Beyond OMG: 5 Ways Social Media Can Inspire Creativity http://t.co/jg4MvqGga1</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#mattBgomez"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <swrl:argument2 rdf:resource="urn:swrl#y"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <swrl:argument2 rdf:resource="urn:swrl#y"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <rdf:rest rdf:nodeID="A85"/>
+    <rdf:first rdf:nodeID="A86"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
     <swrl:argument1 rdf:resource="urn:swrl#y"/>
     <swrl:argument2 rdf:resource="urn:swrl#a"/>
     <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg78">
-    <social:messageText>I love you LA. Couldn't have asked for a better way to close out this stretch of the #JT2020Tour. UK here we come. http://t.co/u9iNZZa5dE</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#jtimberlake"/>
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#CERN">
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg51">
-    <social:messageText>Who should I be following on Scratch? Esp looking for 4th-9th grade classes. @rrodgers</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#mattBgomez"/>
+    <social:messageText>E????? - ?????? ?????? ??? ???????????????? ??? 39?????? ??????? ??? ?? ?????? ??? ??? ?????… http://t.co/FC5LCnkIb9</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#lifomag"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A73">
+  <rdf:Description rdf:nodeID="A80">
     <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthInterest"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument2 rdf:resource="urn:swrl#a"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg65">
-    <social:messageText>I, Intern: Wielding Scalpels and Fielding Pages http://t.co/EL4vcQMMnT</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>RT @jkprater13: So interesting to see and feel what some of our families experience! Such a great PD @kerrygain @speicher59 @8Amber8 #wisdg…</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#8Amber8"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/account">
@@ -924,25 +895,34 @@
     <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
     <rdfs:comment>An OpenID for an Agent.</rdfs:comment>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:first rdf:nodeID="A88"/>
+    <rdf:rest rdf:nodeID="A58"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <swrl:argument2 rdf:resource="urn:swrl#y"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:first rdf:nodeID="A90"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg79">
-    <social:messageText>U.S. FDA approves Merck insomnia drug http://t.co/CIxTTJJRl5</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
+    <social:messageText>???? ???? ??? ?????, ????? ??? ????????, ??? ?????? ?????? ???? ?? ?? ?????????? ???????? / ??? ?????? ???????????? http://t.co/kQMI83Mgtz</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A82">
-    <swrl:body rdf:nodeID="A57"/>
-    <swrl:head rdf:nodeID="A74"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <rdf:Description rdf:nodeID="A62">
+    <rdf:rest rdf:nodeID="A82"/>
+    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceInterest"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A79">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthFriend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A83">
-    <rdf:first rdf:nodeID="A5"/>
-    <rdf:rest rdf:nodeID="A80"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="urn:swrl#a"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Image">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -955,8 +935,8 @@
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg66">
-    <social:messageText>Amgen drug fails to improve survival in multiple myeloma trial http://t.co/sJQ5MQGItX</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
+    <social:messageText>RT @cashjim: "The power of weak ties" - we regularly learn important information from people we don't know/hardly know. #TLDWpeel #peel21st</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#InterestFD1">
@@ -972,18 +952,19 @@
     <rdfs:domain rdf:resource="http://www.eap.gr/gyza/ontology/social#Post"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:first rdf:nodeID="A91"/>
+    <rdf:rest rdf:nodeID="A92"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg4">
-    <social:messageText>Watch Taylor Swift and Jimmy Fallon turn into teenage girls on #FallonTonight: http://t.co/N8ijkYBQYh</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>PowerPoint Doesn’t Suck; 10 Ideas To Make it Great http://t.co/oay088XLDU #psd70 cc @jmclean77</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A84">
-    <rdf:rest rdf:nodeID="A85"/>
-    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceInterest"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg56">
-    <social:messageText>I Had Shamed Students Without Realizing It http://t.co/GBf6Jfgm3A via @edrethink</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#flourishingkids"/>
+    <social:messageText>WHO says 70 die from illness in Congo, denies Ebola link http://t.co/aAHCXFCEBQ</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/sha1">
@@ -995,14 +976,20 @@
     <vs:term_status>unstable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:first rdf:nodeID="A94"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg76">
-    <social:messageText>Trouble sleeping could be a suicide risk factor for older adults http://t.co/2xVxXUjycQ</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
+    <social:messageText>Stroke Rounds: Kids' Stroke Risk Spikes after a Cold http://t.co/2HBHm8Lg8O</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A86">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="urn:swrl#a"/>
+  <rdf:Description rdf:nodeID="A90">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicFriend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/yahooChatID">
     <rdfs:label>Yahoo chat ID</rdfs:label>
@@ -1020,7 +1007,7 @@
     <rdfs:label>Concept</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg86">
-    <social:messageText>Vitamin D Blog: A Bedroom Boost http://t.co/ZP8Sd41RZz</social:messageText>
+    <social:messageText>Motivational interviewing may not curb drinking among young adults http://t.co/SwlPtMaEM2</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
@@ -1029,8 +1016,8 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg67">
-    <social:messageText>What is your body trying to tell you with those aches and pains? http://t.co/bBaFLtHTWY</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
+    <social:messageText>At least 70 dead from hemorrhagic illness in northern Congo: WHO http://t.co/QTek6rtCTV</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/thumbnail">
@@ -1044,9 +1031,19 @@
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg5">
-    <social:messageText>Morning Break: Faking Cancer Dx, Red Meat Allergy http://t.co/10BUu2oEWg</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>Asthma attack rates similar for black and white kids http://t.co/pP02TngefU</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <rdf:first rdf:nodeID="A95"/>
+    <rdf:rest rdf:nodeID="A79"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthFriend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineGamingAccount">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1058,13 +1055,14 @@
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg57">
-    <social:messageText>Robin Williams will receive a "proper and meaningful remembrance" at this month's Primetime Emmy Awards: http://t.co/vew38IYdih</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>Excerpt From 'Doctored ...' http://t.co/1ps6YXyRL2</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A85">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#SportInterest"/>
+  <rdf:Description rdf:nodeID="A96">
+    <swrl:arguments rdf:nodeID="A83"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/LabelProperty">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1073,12 +1071,6 @@
     <rdfs:label>Label Property</rdfs:label>
     <vs:term_status>unstable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A87">
-    <swrl:argument2 rdf:resource="urn:swrl#z"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/workplaceHomepage">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1102,9 +1094,14 @@
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg77">
-    <social:messageText>Is it boozy brunch time yet? 7 not-so-average mimosa recipes: http://t.co/ddkboRYd5q http://t.co/zg5awWBpPA</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
+    <social:messageText>Saying hi to @jseroadrunners on their PD day from Australia. Hope it’s been great!</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <swrl:body rdf:nodeID="A98"/>
+    <swrl:head rdf:nodeID="A99"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/mbox_sha1sum">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1117,34 +1114,39 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="urn:swrl#a"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg87">
-    <social:messageText>On the 45th anniversary of Brian Jones' death, David Fricke picks the Rolling Stones guitarist's essential tracks: http://t.co/CQM44QyfgD</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>Public safe as two Americans treated for Ebola released from hospital: doctor http://t.co/8BXOFMBzCT</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A52">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationInterest"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:first rdf:nodeID="A101"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg68">
-    <social:messageText>Meghan Trainor beats out Jessie J, Nicki Minaj and Ariana Grande for top spot on this week's Digital Songs chart: http://t.co/UCOcWbBt9d</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>?? ???? ??? ??? ?????? ??? ????, ? ??? ???? ???? ????? ?????… / ??? ?????? ??????????? http://t.co/39zLPIxqqG</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg2">
-    <social:messageText>@eduFriends One Two</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#nikolakge"/>
+    <social:messageText>How do you survive Ebola? http://t.co/n2WkXJzJqL</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#TIMEHealth"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A88">
-    <rdf:rest rdf:nodeID="A89"/>
-    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthInterest"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg54">
-    <social:messageText>Edward Snowden: the untold story of the most wanted man in the world: http://t.co/hEpjz8tmsJ / @wired</social:messageText>
+    <social:messageText>The 31 most outrageous moments from the history of the MTV #VMAs: http://t.co/Xb6kdXE4kj</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <swrl:body rdf:nodeID="A64"/>
+    <swrl:head rdf:nodeID="A103"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/skypeID">
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -1158,31 +1160,31 @@
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg74">
-    <social:messageText>$$$ for Doc Starts by Crowdfunding Application http://t.co/wQpZ5YX0UL</social:messageText>
+    <social:messageText>Questioning Medicine: DXA Scan Overuse http://t.co/512lO7dP8D</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A90">
-    <swrl:arguments rdf:nodeID="A91"/>
-    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg88">
+    <social:messageText>U.S. aid workers pose no public risk after Ebola treatment: doctor http://t.co/FUUJmvcGPO</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A92">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthMessage"/>
+  <rdf:Description rdf:nodeID="A104">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg88">
-    <social:messageText>Reading Literature on Screen: A Price for Convenience?   http://t.co/y0zIXC6BdB</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#sciencegoddess"/>
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  <rdf:Description rdf:nodeID="A101">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#MusicInterest">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Interest"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg3">
-    <social:messageText>Enter for a chance to win a signed Phoenix guitar in the @RSCountry / Keith Urban Raise 'Em Up Tour Sweeps http://t.co/q4c0iZQa0t U.S. only</social:messageText>
+    <social:messageText>Bill Kreutzmann reveals Taj Mahal team-up: "I want people to freak out": http://t.co/1U4TT7AOiI</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
@@ -1191,18 +1193,22 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg55">
-    <social:messageText>U.S. advisory panel recommends Prevnar 13 vaccine for elderly http://t.co/XgVcycSFoz</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>“@FourFourTwo: Why does everybody hate Harry? http://t.co/QjksguwvRu http://t.co/KmXc2fwhor” - answers welcomed</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Zonal_Marking"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg69">
-    <social:messageText>Trouble sleeping could be a suicide risk factor for older adults http://t.co/XrgR7wTbKW</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>Jumping In First http://t.co/Qsbc3ePY4Z #suptchat #edchat #cpchat</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A89">
-    <rdf:rest rdf:nodeID="A84"/>
-    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicInterest"/>
+  <rdf:Description rdf:nodeID="A103">
+    <rdf:first rdf:nodeID="A51"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Od_Erg_Nom">
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/focus">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1214,18 +1220,14 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A91">
-    <rdf:rest rdf:nodeID="A86"/>
-    <rdf:first rdf:resource="urn:swrl#z"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg75">
-    <social:messageText>#ICYMI Watch Beck perform "Loser" on #AustinCityLimits for the show's 40th anniversary: http://t.co/1vot538Bj2</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>Exercise May Shield Older Women From Afib (CME/CE) http://t.co/lBpFgXddvx</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg89">
-    <social:messageText>We're excited to release a FREE beta of our bodyweight course, produced with @ChangeCollect. Sign up here: http://t.co/B81XQxeYgl</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
+    <social:messageText>????????? = ??????. ??????! / ??? ?????? ???????, ???????? ???????-?????? http://t.co/rk8qv2V1iW</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/msnChatID">
@@ -1240,10 +1242,10 @@
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A93">
-    <rdf:first rdf:nodeID="A76"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A18">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkInterest"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/fundedBy">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1268,22 +1270,9 @@
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Interest"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#flourishingkids">
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A94">
-    <rdf:first rdf:nodeID="A77"/>
-    <rdf:rest rdf:nodeID="A95"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Friend">
     <rdfs:subClassOf rdf:resource="foaf:Person"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A96">
-    <rdf:first rdf:nodeID="A97"/>
-    <rdf:rest rdf:nodeID="A98"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#SportMessage">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
@@ -1317,25 +1306,9 @@
     <vs:term_status>unstable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A99">
-    <swrl:head rdf:nodeID="A78"/>
-    <swrl:body rdf:nodeID="A94"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A98">
-    <rdf:first rdf:nodeID="A100"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#EducationInterest">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Interest"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A53">
-    <swrl:argument2 rdf:resource="urn:swrl#y"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/surname">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1355,39 +1328,29 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <rdf:first rdf:nodeID="A53"/>
+    <rdf:rest rdf:nodeID="A77"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="urn:swrl#x">
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A101">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#SportFriend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A102">
-    <swrl:argument2 rdf:resource="urn:swrl#z"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#coldplay">
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg18">
-    <social:messageText>Ebola infects nearly 2,000, kills half http://t.co/Az5XS5cs6x</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>Breakfast may not help you lose weight http://t.co/MGxjk1s0qV</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#TIMEHealth"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A51">
-    <rdf:first rdf:nodeID="A103"/>
-    <rdf:rest rdf:nodeID="A104"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#gcouros">
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg59">
-    <social:messageText>High-Dose Flu Vax Protects Seniors Better (CME/CE) http://t.co/FOa7AJ9FVr</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>Ireland testing deceased person recently in Africa for Ebola http://t.co/OpdRyDiqW1</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A29">
-    <rdf:first rdf:nodeID="A105"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -1414,11 +1377,6 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A24">
-    <rdf:first rdf:nodeID="A101"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/givenname">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -1427,17 +1385,12 @@
     <vs:term_status>archaic</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A106">
-    <rdf:first rdf:nodeID="A107"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#sciencegoddess">
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#AthensVoice">
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg19">
-    <social:messageText>Daylight helps workers' health http://t.co/0QhlQiGFei</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>Chris features in @FooFighters #SonicHighways, which debuts on Oct 17 on @HBO in the US. Watch the trailer at http://t.co/uQZMruUH6w. A</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#coldplay"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineChatAccount">
@@ -1449,20 +1402,10 @@
     <vs:term_status>unstable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A104">
-    <rdf:first rdf:nodeID="A108"/>
-    <rdf:rest rdf:nodeID="A96"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg58">
-    <social:messageText>FDA OKs Novel Insomnia Drug http://t.co/e2dfxCzLLO</social:messageText>
+    <social:messageText>Doctor's Memoir Exposes Dark Side of Medicine http://t.co/lHWupAuWSk</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A105">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicFriend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/title">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1494,10 +1437,10 @@
     <vs:term_status>unstable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A109">
-    <swrl:head rdf:nodeID="A21"/>
-    <swrl:body rdf:nodeID="A110"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg99">
+    <social:messageText>????????????? ????? ??????????? ??? ????? ??? ????? http://t.co/A169AiUq6U</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/currentProject">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1508,15 +1451,6 @@
     <rdfs:label>current project</rdfs:label>
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A107">
-    <swrl:arguments rdf:nodeID="A111"/>
-    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A112">
-    <rdf:rest rdf:nodeID="A113"/>
-    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationInterest"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
     <rdfs:comment>A homepage for some thing.</rdfs:comment>
@@ -1531,18 +1465,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A114">
-    <rdf:first rdf:nodeID="A87"/>
-    <rdf:rest rdf:nodeID="A115"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A106">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Interest">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A116">
-    <swrl:body rdf:nodeID="A117"/>
-    <swrl:head rdf:nodeID="A118"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/accountServiceHomepage">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1554,14 +1483,28 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A110">
-    <rdf:first rdf:nodeID="A30"/>
-    <rdf:rest rdf:nodeID="A83"/>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:first rdf:nodeID="A107"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#MusicInterest"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="urn:swrl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <swrl:arguments rdf:nodeID="A110"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg98">
-    <social:messageText>More middle-aged U.S. women having babies outside marriage: CDC http://t.co/dZxd824RWl</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>?? ???????? ??? ????? ??? ???????? 5??? ?????????, ??? ?? ?? ???????????. / ??? ???????? ????????? http://t.co/u0VCcVngkG</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#EducationMessage">
@@ -1569,12 +1512,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A111">
-    <rdf:rest rdf:nodeID="A119"/>
-    <rdf:first rdf:resource="urn:swrl#z"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A120">
-    <owl:members rdf:nodeID="A112"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <rdf:first rdf:nodeID="A89"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/theme">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1586,20 +1526,14 @@
     <vs:term_status>archaic</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A121">
-    <rdf:first rdf:nodeID="A81"/>
-    <rdf:rest rdf:nodeID="A114"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A118">
-    <rdf:first rdf:nodeID="A122"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#owner">
     <rdfs:range rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
     <rdfs:domain rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <rdf:rest rdf:nodeID="A108"/>
+    <rdf:first rdf:resource="urn:swrl#z"/>
   </rdf:Description>
   <rdf:Description rdf:about="foaf:Agent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -1614,8 +1548,24 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A62">
-    <rdf:first rdf:nodeID="A123"/>
+  <rdf:Description rdf:nodeID="A27">
+    <swrl:argument2 rdf:resource="urn:swrl#y"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:argument2 rdf:resource="urn:swrl#a"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdf:rest rdf:nodeID="A112"/>
+    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:first rdf:nodeID="A109"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
@@ -1626,6 +1576,11 @@
     <vs:term_status>stable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <rdf:first rdf:nodeID="A113"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/aimChatID">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -1639,42 +1594,52 @@
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A119">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="urn:swrl#a"/>
+  <rdf:Description rdf:nodeID="A114">
+    <rdf:first rdf:nodeID="A81"/>
+    <rdf:rest rdf:nodeID="A115"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A122">
+  <rdf:Description rdf:nodeID="A116">
+    <rdf:first rdf:nodeID="A96"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
     <swrl:argument1 rdf:resource="urn:swrl#x"/>
     <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceFriend"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A100">
-    <swrl:arguments rdf:nodeID="A124"/>
-    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+  <rdf:Description rdf:nodeID="A117">
+    <swrl:head rdf:nodeID="A93"/>
+    <swrl:body rdf:nodeID="A114"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A95">
-    <rdf:rest rdf:nodeID="A93"/>
-    <rdf:first rdf:nodeID="A92"/>
+  <rdf:Description rdf:nodeID="A118">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="urn:swrl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:first rdf:nodeID="A0"/>
+    <rdf:rest rdf:nodeID="A119"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/wot/0.1/src_assurance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A123">
-    <swrl:argument1 rdf:resource="urn:swrl#f"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkFriend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  <rdf:Description rdf:nodeID="A112">
+    <rdf:rest rdf:nodeID="A76"/>
+    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkInterest"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A125">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:argument2 rdf:resource="urn:swrl#a"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
+  <rdf:Description rdf:nodeID="A120">
+    <swrl:argument2 rdf:resource="urn:swrl#z"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A113">
-    <rdf:rest rdf:nodeID="A88"/>
-    <rdf:first rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkInterest"/>
+  <rdf:Description rdf:nodeID="A115">
+    <rdf:rest rdf:nodeID="A111"/>
+    <rdf:first rdf:nodeID="A106"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/status">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1686,14 +1651,19 @@
     <vs:term_status>unstable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#SportFriend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#SportInterest"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social">
     <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A115">
-    <rdf:first rdf:nodeID="A90"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#MedicalNews">
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
@@ -1708,70 +1678,63 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A126">
-    <rdf:rest rdf:nodeID="A127"/>
-    <rdf:first rdf:resource="urn:swrl#z"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A97">
-    <swrl:argument2 rdf:resource="urn:swrl#z"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-  </rdf:Description>
   <rdf:Description rdf:about="urn:swrl#f">
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A48">
-    <rdf:rest rdf:nodeID="A128"/>
-    <rdf:first rdf:nodeID="A129"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A67">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A130">
-    <swrl:arguments rdf:nodeID="A126"/>
-    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#HealthMessage">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A131">
-    <rdf:first rdf:nodeID="A68"/>
-    <rdf:rest rdf:nodeID="A132"/>
+  <rdf:Description rdf:nodeID="A121">
+    <swrl:argument1 rdf:resource="urn:swrl#f"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#FoodAndDrinkFriend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <rdf:rest rdf:nodeID="A123"/>
+    <rdf:first rdf:nodeID="A124"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <rdf:rest rdf:nodeID="A126"/>
+    <rdf:first rdf:resource="urn:swrl#z"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg12">
-    <social:messageText>Willie Nelson speaks out on Texas border children: "We've got to help those kids": http://t.co/8FFxVT5DZV</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>Maybe a #schoolselfiechallenge for back to school?  Would be amazing to see more like this from @julnilsmith  http://t.co/yN8otVfz05</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <rdf:rest rdf:nodeID="A116"/>
+    <rdf:first rdf:nodeID="A120"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <rdf:first rdf:nodeID="A129"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg95">
-    <social:messageText>Vertex to end sales of hepatitis C drug Incivek http://t.co/Y805HkvTL1</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
+    <social:messageText>#SinCity siren Eva Green on her movie poster's nipple problem: http://t.co/k5GQvnNBBL</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg22">
-    <social:messageText>RT @F1000: Can you sum up your research in a few minutes? 1st entry in our #F1000Specialists vid competition, from @Etche_homo http://t.co/…</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#sciencegoddess"/>
+    <social:messageText>Ebola response of MSF and 'boiling frog' WHO under scrutiny http://t.co/52hQLXPHCS</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:first rdf:nodeID="A130"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#MusicFriend">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A108">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:argument2 rdf:resource="urn:swrl#a"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/publications">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1787,21 +1750,6 @@
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A129">
-    <swrl:argument1 rdf:resource="urn:swrl#f"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A133">
-    <rdf:first rdf:nodeID="A130"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A132">
-    <rdf:rest rdf:nodeID="A134"/>
-    <rdf:first rdf:nodeID="A135"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Project">
     <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
     <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
@@ -1812,10 +1760,28 @@
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <rdf:first rdf:nodeID="A10"/>
+    <rdf:rest rdf:nodeID="A122"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <rdf:first rdf:nodeID="A121"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg13">
-    <social:messageText>after 2 weeks on the road home is a nice place to be http://t.co/5cdoxk4Fts</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#sundaysuppers"/>
+    <social:messageText>How To Integrate iPads With The New #Google Classroom http://t.co/7m61FS7HFb #ipaded</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#mattBgomez"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Zonal_Marking">
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <swrl:arguments rdf:nodeID="A125"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/member">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -1827,11 +1793,27 @@
     <vs:term_status>stable</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <rdf:first rdf:nodeID="A87"/>
+    <rdf:rest rdf:nodeID="A127"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg94">
-    <social:messageText>RT @blakeshelton: “@IanNeilG: If you didn't pursue music what will be your job today? @blakeshelton”
-Starting a gossip column about people …</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#jtimberlake"/>
+    <social:messageText>Get your blood pumping at work with these 33 #deskercises: http://t.co/b4axQOTJsE http://t.co/BlcpahpCeg</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <swrl:argument2 rdf:resource="urn:swrl#z"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <swrl:argument2 rdf:resource="urn:swrl#z"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/lastName">
     <rdfs:domain rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
@@ -1856,29 +1838,18 @@ Starting a gossip column about people …</social:messageText>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg23">
-    <social:messageText>Nigeria reports one more Ebola case, 11 in total http://t.co/xgUwsfbpeW</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
+    <social:messageText>Ebola response of MSF and 'boiling frog' WHO under scrutiny http://t.co/aysF0M61uR</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A136">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#SportInterest"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A128">
-    <rdf:first rdf:nodeID="A137"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg38">
-    <social:messageText>Now I know where to go when I find one #texasyall @ Cameron, TX http://t.co/R2KcfelfnF</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#mattBgomez"/>
+    <social:messageText>Since you're all watching #EverySimpsonsEver, here's the video for "Do The Bartman": http://t.co/6omLYkdZey</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A103">
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  <rdf:Description rdf:nodeID="A134">
+    <rdf:rest rdf:nodeID="A118"/>
+    <rdf:first rdf:resource="urn:swrl#z"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#posts">
     <rdfs:range rdf:resource="http://www.eap.gr/gyza/ontology/social#Post"/>
@@ -1886,14 +1857,15 @@ Starting a gossip column about people …</social:messageText>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A138">
-    <swrl:head rdf:nodeID="A3"/>
-    <swrl:body rdf:nodeID="A139"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <rdf:Description rdf:nodeID="A59">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:argument2 rdf:resource="urn:swrl#a"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A140">
-    <rdf:first rdf:nodeID="A141"/>
-    <rdf:rest rdf:nodeID="A133"/>
+  <rdf:Description rdf:nodeID="A123">
+    <rdf:first rdf:nodeID="A4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/depicts">
@@ -1907,6 +1879,11 @@ Starting a gossip column about people …</social:messageText>
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <rdf:first rdf:nodeID="A52"/>
+    <rdf:rest rdf:nodeID="A132"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/family_name">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -1917,15 +1894,32 @@ Starting a gossip column about people …</social:messageText>
     <vs:term_status>archaic</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <swrl:argument2 rdf:resource="urn:swrl#x"/>
+    <swrl:argument1 rdf:resource="urn:swrl#f"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <swrl:argument2 rdf:resource="urn:swrl#z"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg10">
-    <social:messageText>Amy Lee talks 'Aftermath' and returning to the road in part two of our exclusive Q&amp;amp;A: http://t.co/J08rmgvv0C</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>@MedicalNews Test  #foodFriends</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#nikolakge"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg24">
-    <social:messageText>Nigeria reports one more Ebola case, 11 in total http://t.co/8lKiIQIMqJ</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>RT @jenadelvecchio: @gcouros Beauty Night in Vancouver's Downtown eastside: because dignity is beautiful http://t.co/2W83bkM4Qj</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/maker">
     <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/creator"/>
@@ -1939,47 +1933,35 @@ Starting a gossip column about people …</social:messageText>
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A142">
-    <rdf:first rdf:nodeID="A31"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg97">
-    <social:messageText>Injecting bacteria shrinks tumors in dogs and one patient: study http://t.co/OIiUY7CYZl</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>Public safe as two Americans treated for Ebola released from hospital: doctor http://t.co/VRhOkgEQ6q</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A143">
-    <swrl:body rdf:nodeID="A72"/>
-    <swrl:head rdf:nodeID="A49"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <rdf:Description rdf:nodeID="A138">
+    <rdf:rest rdf:nodeID="A100"/>
+    <rdf:first rdf:resource="urn:swrl#z"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg39">
-    <social:messageText>"He made movies rock &amp;amp; roll." Peter Travers pays tribute to the late Robin Williams: http://t.co/j0KGTFomW7</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>Lupus Fibromyalgia - Everything You Need to Know http://t.co/nVj1nB6uN2</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#CathyLee4Pain"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A66">
-    <rdf:rest rdf:nodeID="A121"/>
-    <rdf:first rdf:nodeID="A136"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A137">
-    <swrl:argument2 rdf:resource="urn:swrl#x"/>
-    <swrl:argument1 rdf:resource="urn:swrl#f"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A144">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:argument2 rdf:resource="urn:swrl#a"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
+  <rdf:Description rdf:nodeID="A72">
+    <swrl:argument2 rdf:resource="urn:swrl#z"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A139">
-    <rdf:first rdf:nodeID="A10"/>
-    <rdf:rest rdf:nodeID="A131"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A130">
+    <swrl:arguments rdf:nodeID="A134"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#InterestEdu1">
     <social:interestText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school</social:interestText>
@@ -1990,6 +1972,11 @@ Starting a gossip column about people …</social:messageText>
     <social:interestText rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> teacher</social:interestText>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#EducationInterest"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <rdf:first rdf:nodeID="A63"/>
+    <rdf:rest rdf:nodeID="A135"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/isPrimaryTopicOf">
     <rdfs:comment>A document that this thing is the primary topic of.</rdfs:comment>
@@ -2004,31 +1991,47 @@ Starting a gossip column about people …</social:messageText>
     <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/primaryTopic"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg11">
-    <social:messageText>Do you know your Bikram from your Vinyasa? Avoid yoga class confusion &amp;amp; take our quiz: http://t.co/sRZBd6Oofy</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
+    <social:messageText>I'm hoping that as we go back to school and meet together as a staff, we remember that we need inspiration as much as information.</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg25">
-    <social:messageText>RT @earthskyscience: Potential landing sites on Rosetta's comet
-http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#sciencegoddess"/>
+    <social:messageText>Time for a Meeting of the Minds http://t.co/Qk4jir3Q5j</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A145">
-    <swrl:argument2 rdf:resource="urn:swrl#z"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  <rdf:Description rdf:nodeID="A126">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="urn:swrl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:first rdf:nodeID="A136"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceInterest"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <swrl:arguments rdf:nodeID="A138"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg96">
-    <social:messageText>Karen O will stage listening parties for hew new album in fans' living rooms and has revealed tour dates: http://t.co/GtvnPGvmrJ</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>????????? ??????????
+
+??????? ????????? ???????????????? ???????? ? ??. ?? ???? ????????
+ 
+http://t.co/NdONW8GJO2</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Od_Erg_Nom"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A69">
-    <rdf:rest rdf:nodeID="A140"/>
-    <rdf:first rdf:nodeID="A144"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  <rdf:Description rdf:nodeID="A140">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#HealthMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/givenName">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -2046,9 +2049,14 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg46">
-    <social:messageText>Listen to Michael Cera's folky solo album: http://t.co/Um14f3M4Gu</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>Ebola response of MSF and 'boiling frog' WHO under scrutiny http://t.co/NHZNBCu6XC</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <rdf:rest rdf:nodeID="A142"/>
+    <rdf:first rdf:nodeID="A143"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/knows">
     <rdfs:range rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
@@ -2063,14 +2071,20 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg36">
-    <social:messageText>Edible/Functional Chocolate Legos http://t.co/hwGZ78mawH Nom! http://t.co/Psh407YNC4</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#sciencegoddess"/>
+    <social:messageText>The Epic Classroom: It Starts With Conflict http://t.co/UVE2qQ1gft</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#8Amber8"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg91">
-    <social:messageText>NewLink Genetics Corp says an Ebola vaccine trial could start in weeks. A Reuters exclusive: http://t.co/2k7p1ZpGst</social:messageText>
+    <social:messageText>Motivational interviewing may not curb drinking among young adults http://t.co/i3pq1hjC9Y</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <swrl:argument2 rdf:resource="urn:swrl#z"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Organization">
     <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
@@ -2084,44 +2098,47 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg16">
-    <social:messageText>I Know What Students Want So Why Do I Forget It? http://t.co/UtAaBKtOzS via @pernilleripp</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#flourishingkids"/>
+    <social:messageText>Would love to see more staff pics like this MT @awelcome: Entire JSE teaching staff selfie #beststaffever http://t.co/CZMoN0WCA2 #psd70</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A70">
-    <swrl:argument2 rdf:resource="urn:swrl#y"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg26">
-    <social:messageText>Some Myths About Student Choice and Voice http://t.co/qup5lj7ePO via @pernilleripp</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#flourishingkids"/>
+    <social:messageText>'Miraculous Day': U.S. Ebola Patients Discharged http://t.co/2mLMZXzGZD</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A146">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#ScienceMessage"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg47">
-    <social:messageText>Two out of five U.S. adults at risk of developing diabetes -study http://t.co/wRa28TybT5</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
+    <social:messageText>The new trailer for Foo Fighters' 'Sonic Highways' show features Barack Obama and countless rock gods: http://t.co/h6Cc6X5O5O</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <rdf:first rdf:nodeID="A140"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg90">
-    <social:messageText>5 amazing (and possibly apocryphal) Willie Nelson stories: http://t.co/7bDx5CM6QN</social:messageText>
+    <social:messageText>You can get your hands on Aphex Twin's new album 'Syro,' his first proper album in 13 years, next month: http://t.co/H0Hb87SLdX</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg37">
-    <social:messageText>Good news: going to see Jack White. Bad news: he just put out a new album. #FreeBird!</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#foodwishes"/>
+    <social:messageText>Thoughts? RT @sandyjmac: Do you  have any thoughts on pinterest in the classroom, we currently block it and a teacher would like to use it</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#EducationFriend">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:first rdf:nodeID="A104"/>
+    <rdf:rest rdf:nodeID="A141"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="urn:swrl#a"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
     <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
@@ -2138,19 +2155,14 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <rdfs:label>Thing</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg17">
-    <social:messageText>8 whiz kids changing medicine http://t.co/5naSS11EDq</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>For the poetic fight inside us. / T?? ????? ????????? http://t.co/HNSy6NwHUw</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#AthensVoice"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg27">
-    <social:messageText>Korean Air suspends flights to Kenya over Ebola worries http://t.co/ZBqDVR8T3L</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#MedicalNews"/>
+    <social:messageText>#ICYMI Bill Murray Day is coming to this year's Toronto International Film Festival: http://t.co/SIpujZTwDE</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A147">
-    <rdf:first rdf:nodeID="A26"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#MusicMessage">
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
@@ -2160,20 +2172,24 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <rdfs:subClassOf rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A135">
-    <swrl:argument1 rdf:resource="urn:swrl#y"/>
-    <swrl:argument2 rdf:resource="urn:swrl#a"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  <rdf:Description rdf:nodeID="A146">
+    <rdf:first rdf:nodeID="A67"/>
+    <rdf:rest rdf:nodeID="A105"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <swrl:body rdf:nodeID="A139"/>
+    <swrl:head rdf:nodeID="A144"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg34">
-    <social:messageText>Quickly falling in love with @InstacartSF</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#foodwishes"/>
+    <social:messageText>Listen to the new Run the Jewels track "Blockbuster Night Part 1": http://t.co/MBjKg68OCs</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg48">
-    <social:messageText>You can now invest in Neil Young's PonoMusic. Find out how: http://t.co/vwVAPEsWes</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>FDA OKs use of Eliquis to treat leg, lung clots http://t.co/H8u6821T7h</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/interest">
@@ -2187,41 +2203,36 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg93">
-    <social:messageText>RT @THETNKIDS: Yes! @timberlakersss http://t.co/LUEUPLtEET #DouseandDONATE #ALSIceBucketChallenge</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#jtimberlake"/>
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg14">
-    <social:messageText>Check out all of the (nut) buttery goodness: http://t.co/5414GzadKG http://t.co/cqTYUtZvdS</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#foodwishes">
-    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A127">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="urn:swrl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A134">
-    <rdf:rest rdf:nodeID="A142"/>
-    <rdf:first rdf:nodeID="A145"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A117">
-    <rdf:first rdf:nodeID="A17"/>
-    <rdf:rest rdf:nodeID="A148"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg28">
-    <social:messageText>Korean Air suspends flights to Kenya over Ebola worries http://t.co/I1pr4r4knS</social:messageText>
+    <social:messageText>Fewer U.S. youth using sunscreen new study finds http://t.co/Z140B1aOH6</social:messageText>
     <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A65">
-    <rdf:first rdf:nodeID="A125"/>
-    <rdf:rest rdf:nodeID="A149"/>
+  <rdf:Description rdf:nodeID="A142">
+    <rdf:rest rdf:nodeID="A128"/>
+    <rdf:first rdf:nodeID="A133"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#lifomag">
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg14">
+    <social:messageText>How many of these 16 must-try craft beers have you tasted? http://t.co/Z67zoWDr6j http://t.co/Cxdivq4oJE</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <rdf:rest rdf:nodeID="A145"/>
+    <rdf:first rdf:resource="urn:swrl#z"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <rdf:first rdf:nodeID="A131"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg28">
+    <social:messageText>For #CEDP14 and #ceoelearn this week, here is a list of Aussie Educators on Twitter from @suewaters: https://t.co/OhjIlCZoMC #aussieED</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
+    <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/familyName">
     <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -2233,31 +2244,43 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <vs:term_status>testing</vs:term_status>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <swrl:head rdf:nodeID="A74"/>
+    <swrl:body rdf:nodeID="A146"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#nikolakge">
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Friend"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg35">
-    <social:messageText>Rethinking Paradox http://t.co/Wl2tQtrrRL via @edrethink</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#flourishingkids"/>
+    <social:messageText>Those #microbeads in your face wash turn into a mighty problem when they get to the ocean: http://t.co/dv7NJgnAYT http://t.co/FWihWk0SUe</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg49">
-    <social:messageText>Death Cab for Cutie's Chris Walla is leaving the band after 17 years. Read his and the band's emotional statements: http://t.co/KEz6H3Kpd7</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
+    <social:messageText>?????? - ? ????? ???????????? ?? ????? ? ???? ???????????? ??? ????????: ???? 99% ??… http://t.co/aCOwF8X1p1</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#lifomag"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:argument2 rdf:resource="urn:swrl#a"/>
+    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#interestText"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg92">
-    <social:messageText>“@freestylesteve: Lastnite.. Was Mad Real.</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#jtimberlake"/>
+    <social:messageText>Researchers reverse autism symptoms in mice by paring extra synapses http://t.co/q1Kbe2I849</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#Reuters_Health"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
     <rdfs:label>Spatial Thing</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A150">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="urn:swrl#a"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/jabberID">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
@@ -2271,8 +2294,8 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg15">
-    <social:messageText>#MorningMotivation: Fitness is not about being better than someone else. It's about being better than you used to be.</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#greatist"/>
+    <social:messageText>RT @ryanjreilly: Stopped by the #Ferguson Library again today, where teachers are volunteering to teach students http://t.co/ZbaT9hH6iV</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#gcouros"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#interestText">
@@ -2280,35 +2303,25 @@ http://t.co/M81B05ylOm http://t.co/QotbE5jioA</social:messageText>
     <rdfs:domain rdf:resource="http://www.eap.gr/gyza/ontology/social#Interest"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A124">
-    <rdf:rest rdf:nodeID="A150"/>
-    <rdf:first rdf:resource="urn:swrl#z"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A141">
-    <swrl:argument2 rdf:resource="urn:swrl#z"/>
-    <swrl:argument1 rdf:resource="urn:swrl#x"/>
-    <swrl:propertyPredicate rdf:resource="http://www.eap.gr/gyza/ontology/social#messageText"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  <rdf:Description rdf:nodeID="A68">
+    <swrl:arguments rdf:nodeID="A148"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#Msg29">
-    <social:messageText>Social media &amp;amp; strategy http://t.co/Z0Ib4ReDMw via @8Amber8</social:messageText>
-    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#flourishingkids"/>
+    <social:messageText>In honor of #EverySimpsonsEver, we've ranked the 150 greatest Simpsons episodes ever, from monorails to Mr. Plow: http://t.co/b1UGpXOg6h</social:messageText>
+    <social:hasOwner rdf:resource="http://www.eap.gr/gyza/ontology/social#RollingStone"/>
     <rdf:type rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A148">
-    <rdf:rest rdf:nodeID="A147"/>
-    <rdf:first rdf:nodeID="A146"/>
+  <rdf:Description rdf:nodeID="A119">
+    <rdf:first rdf:nodeID="A137"/>
+    <rdf:rest rdf:nodeID="A149"/>
     <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#messageText">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://www.eap.gr/gyza/ontology/social#Message"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A149">
-    <rdf:rest rdf:nodeID="A106"/>
-    <rdf:first rdf:nodeID="A102"/>
-    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.eap.gr/gyza/ontology/social#hasOwner">
     <owl:inverseOf rdf:resource="http://www.eap.gr/gyza/ontology/social#owner"/>

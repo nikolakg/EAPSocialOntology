@@ -7,7 +7,7 @@
 <h4><a href="<c:url value="/twitter"/>">Twitter</a></h4>
 <social:connected provider="twitter">
 <ul class="menu">
-     <li><a href="<c:url value="/twitter/ontology"/>">Enable EAP Ontology</a></li>
+    <li><a href="<c:url value="/twitter/ontology"/>">Enable EAP Ontology</a></li>
     <li><a href="<c:url value="/twitter"/>">User Profile</a></li>
     <li><a href="<c:url value="/twitter/timeline"/>">Timeline</a></li>
     <li><a href="<c:url value="/twitter/friends"/>">Friends</a></li>

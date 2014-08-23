@@ -15,26 +15,7 @@
  */
 package eu.gyza.eap.eapsocialontology.twitter;
 
-import com.hp.hpl.jena.ontology.DatatypeProperty;
-import com.hp.hpl.jena.ontology.Individual;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntModel;
-import static com.hp.hpl.jena.ontology.OntModelSpec.OWL_MEM;
-import com.hp.hpl.jena.ontology.OntProperty;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.Resource;
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Iterator;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.inject.Inject;
-import org.mindswap.pellet.jena.PelletReasonerFactory;
-import org.springframework.social.twitter.api.Tweet;
 
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.stereotype.Controller;
@@ -48,11 +29,7 @@ public class TwitterOntologyController {
 
     private final Twitter twitter;
     private SocialOntology ontology;
-    private static String SOURCE = "http://www.eap.gr/gyza/ontology/social";
-    private static String NS = SOURCE + "#";
-   // private static String file = "C://projects/GinasThesis_EAP/protegeOntology/eapOntology3.owl";
-    private static String ontologyResource = "eapOntology4.owl";
-    
+ 
     @Inject
     public TwitterOntologyController(Twitter twitter, SocialOntology ontology) {
         this.twitter = twitter;
@@ -60,13 +37,7 @@ public class TwitterOntologyController {
     }
     
      
-    @RequestMapping(value = "/twitter/healthfriends", method = RequestMethod.GET)
-    public String healthfriends(Model model) {
-        //ontology.loadModel(twitter);
-        model.addAttribute("healthFriendMessages", ontology.getHealthFriendMessages());
-        return "ontology/healthfriends";
-    }
-    
+      
     @RequestMapping(value = "/twitter/ontology", method = RequestMethod.GET)
     public String ontologies(Model model) {
         ontology.loadModel(twitter);

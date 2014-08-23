@@ -11,40 +11,40 @@
 </script>
       
 <h3>Ontology Inference </h3>
-Music Friends are:
+Music Friends [because of <a href="<c:url value="/ontology/msgs/music"/>">Messages</a>] are:
 <ul>
 <c:forEach items="${musicFriends}" var="ontology">
 		<li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
 </ul>
 
-Science Friends are:
+Science Friends [because of <a href="<c:url value="/ontology/msgs/science"/>">Messages</a>] are:
 <ul>
 <c:forEach items="${scienceFriends}" var="ontology">
 		<li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
 </ul>
 
-Food Friends are:
+Food Friends  [because of <a href="<c:url value="/ontology/msgs/food"/>">Messages</a>]  are:
 <ul>
 <c:forEach items="${foodFriends}" var="ontology">
 		<li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
 </ul>
-<a href="<c:url value="/twitter/healthfriends"/>">Health Friends</a> are:
+Health Friends [because of <a href="<c:url value="/ontology/msgs/health"/>">Messages</a>] are :
 <ul>
 <c:forEach items="${healthFriends}" var="ontology">
-		<li><c:out value="${ontology.localName}"/></lo>
+    <li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
                     
 </ul>
-Education Friends are:
+Education Friends [because of <a href="<c:url value="/ontology/msgs/edu"/>">Messages</a>] are :
 <ul>
 <c:forEach items="${eduFriends}" var="ontology">
 		<li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
 </ul>
-Sport Friends are:
+Sport Friends  [because of <a href="<c:url value="/ontology/msgs/sport"/>">Messages</a>] are:
 <ul>
 <c:forEach items="${sportFriends}" var="ontology">
 		<li><c:out value="${ontology.localName}"/></lo>

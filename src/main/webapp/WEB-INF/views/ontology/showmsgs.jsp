@@ -3,9 +3,9 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf" %>
 <%@ page session="false" %>
 
-<h2>Health Friend Messages</h2>
+<h2><c:out value="${msgtype}"/> Friend Messages</h2>
 <ul style="clear">
-<c:forEach items="${healthFriendMessages}" var="message">
+<c:forEach items="${friendMessages}" var="message">
 		<li><c:out value="${message.string}"/></lo>
 </c:forEach>
 </ul>

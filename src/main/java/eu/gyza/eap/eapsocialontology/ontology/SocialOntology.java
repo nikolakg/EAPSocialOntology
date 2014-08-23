@@ -209,14 +209,29 @@ public class SocialOntology {
         //return interestResource.listSubClasses()(interestResource);
     }
 
-    public Object getHealthFriendMessages() {
-        Resource healthMessageResouce = infOntModel.getResource(NS + "HealthMessage");
+    public Object getFriendMessages(String interest) {
+        String resouceName = "";
+        if("edu".equals(interest)){
+           resouceName="EducationMessage";
+        }else if ("food".equals(interest)){
+              resouceName="FoodAndDrinkMessage";
+        }else if("music".equals(interest)){
+             resouceName="MusicMessage";
+        }else if("health".equals(interest)){
+              resouceName="HealthMessage";
+        }else if("sport".equals(interest)){
+             resouceName="SportMessage";
+        }else if("science".equals(interest)){
+             resouceName="ScienceMessage";
+        }
+        Resource messageResouce = infOntModel.getResource(NS + resouceName);
         DatatypeProperty messageTextProp = base.getDatatypeProperty(NS + "messageText" );
+        
         ArrayList<Statement> v = new ArrayList();
-        for (Iterator<Individual> i = infOntModel.listIndividuals(healthMessageResouce); i.hasNext();) {   
+        for (Iterator<Individual> i = infOntModel.listIndividuals(messageResouce); i.hasNext();) {   
             Individual o = i.next();
             v.add(o.getProperty(messageTextProp));
-            System.out.println(o.getProperty(messageTextProp).getString()+ " is HealthMessage" );
+           // System.out.println(o.getProperty(messageTextProp).getString()+ " is HealthMessage" );
         }
         return v;
     }

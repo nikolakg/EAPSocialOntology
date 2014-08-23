@@ -6,8 +6,8 @@
 	<definition name="ontology/show" extends="page">
 		<put-attribute name="content" value="/WEB-INF/views/ontology/show.jsp" />
 	</definition>
-        <definition name="ontology/healthfriends" extends="page">
-		<put-attribute name="content" value="/WEB-INF/views/ontology/healthfriends.jsp" />
+        <definition name="ontology/showmsgs" extends="page">
+		<put-attribute name="content" value="/WEB-INF/views/ontology/showmsgs.jsp" />
 	</definition>
 
 </tiles-definitions>

@@ -14,17 +14,18 @@ import static com.hp.hpl.jena.ontology.OntModelSpec.OWL_MEM;
 import com.hp.hpl.jena.ontology.OntProperty;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.Statement;
 import eu.gyza.eap.eapsocialontology.twitter.TwitterOntologyController;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
@@ -39,6 +40,8 @@ import org.springframework.social.twitter.api.Twitter;
  */
 public class SocialOntology {
     private OntModel infOntModel;
+    private OntModel base;
+    private boolean intitilized = false;
     private static String SOURCE = "http://www.eap.gr/gyza/ontology/social";
     private static String NS = SOURCE + "#";
    // private static String file = "C://projects/GinasThesis_EAP/protegeOntology/eapOntology3.owl";
@@ -130,26 +133,15 @@ public class SocialOntology {
     }
 
     public void loadModel( Twitter twitter) {
-        List<Tweet> tweetList = twitter.timelineOperations().getHomeTimeline(100); 
-        InputStream inputStream = 
-            getClass().getClassLoader().getResourceAsStream(ontologyResource);
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new InputStreamReader(inputStream ,"UTF-8"));
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SocialOntology.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        OntModel base = ModelFactory.createOntologyModel(OWL_MEM);
-        base.read(reader, "RDF/XML");
-       
-        // Load twitter friends in Ontology
+        resetModel();
+         // Load twitter friends in Ontology
         OntClass friendOnt = base.getOntClass(NS + "Friend");
         OntProperty ownerOntProp = base.getOntProperty( NS + "owner" );
-        
         OntClass messageOnt = base.getOntClass(NS + "Message");
         DatatypeProperty messageTextProp = base.getDatatypeProperty(NS + "messageText" );
         OntProperty hasOwnerOntProp = base.getOntProperty( NS + "hasOwner" );
-        
+  
+        List<Tweet> tweetList = twitter.timelineOperations().getHomeTimeline(100); 
         Individual friendInd;
         int j=0;
         for (Tweet t : tweetList) {
@@ -189,5 +181,54 @@ public class SocialOntology {
              return  getEduFiends();
         }
         else return null;
+    }
+
+    public void initilize() {
+        if(intitilized)
+            return;
+        InputStream inputStream = 
+            getClass().getClassLoader().getResourceAsStream(ontologyResource);
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new InputStreamReader(inputStream ,"UTF-8"));
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(SocialOntology.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        base = ModelFactory.createOntologyModel(OWL_MEM);
+        base.read(reader, "RDF/XML");
+        intitilized = true;
+        
+    }
+
+    Object getInterestCategories() {
+        if(!intitilized)
+            initilize();
+        OntClass artefact = base.getOntClass( NS + "Interest" );
+        return artefact.listSubClasses();
+  
+        //return interestResource.listSubClasses()(interestResource);
+    }
+
+    public Object getHealthFriendMessages() {
+        Resource healthMessageResouce = infOntModel.getResource(NS + "HealthMessage");
+        DatatypeProperty messageTextProp = base.getDatatypeProperty(NS + "messageText" );
+        ArrayList<Statement> v = new ArrayList();
+        for (Iterator<Individual> i = infOntModel.listIndividuals(healthMessageResouce); i.hasNext();) {   
+            Individual o = i.next();
+            v.add(o.getProperty(messageTextProp));
+            System.out.println(o.getProperty(messageTextProp).getString()+ " is HealthMessage" );
+        }
+        return v;
+    }
+
+    private void resetModel() {
+        intitilized = false;
+        initilize();
+        /*Resource messageResouce = base.getResource(NS + "Message");
+        for (Iterator<Individual> i = base.listIndividuals(messageResouce); i.hasNext();) {   
+           Individual o = i.next();
+           o.remove();
+        }*/
+      
     }
 }

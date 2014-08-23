@@ -3,17 +3,18 @@
 <%@ taglib uri="http://www.springframework.org/spring-social/social/tags" prefix="social" %>
 
 <h4><a href="<c:url value="/connect"/>">Connections</a></h4>
-
+<h4><a href="<c:url value="/ontology"/>">EAP Ontology Settings</a></h4>
 <h4><a href="<c:url value="/twitter"/>">Twitter</a></h4>
 <social:connected provider="twitter">
 <ul class="menu">
-	<li><a href="<c:url value="/twitter"/>">User Profile</a></li>
-	<li><a href="<c:url value="/twitter/timeline"/>">Timeline</a></li>
-	<li><a href="<c:url value="/twitter/friends"/>">Friends</a></li>
-	<li><a href="<c:url value="/twitter/followers"/>">Followers</a></li>
-	<li><a href="<c:url value="/twitter/messages"/>">Messages</a></li>
-	<li><a href="<c:url value="/twitter/trends"/>">Trends</a></li>
-        <li><a href="<c:url value="/twitter/ontology"/>">EnableOntology</a></li>
+     <li><a href="<c:url value="/twitter/ontology"/>">Enable EAP Ontology</a></li>
+    <li><a href="<c:url value="/twitter"/>">User Profile</a></li>
+    <li><a href="<c:url value="/twitter/timeline"/>">Timeline</a></li>
+    <li><a href="<c:url value="/twitter/friends"/>">Friends</a></li>
+    <li><a href="<c:url value="/twitter/followers"/>">Followers</a></li>
+    <li><a href="<c:url value="/twitter/messages"/>">Messages</a></li>
+    <li><a href="<c:url value="/twitter/trends"/>">Trends</a></li>
+       
 </ul>
 </social:connected>
 

@@ -31,11 +31,12 @@ Food Friends are:
 		<li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
 </ul>
-Health Friends are:
+<a href="<c:url value="/twitter/healthfriends"/>">Health Friends</a> are:
 <ul>
 <c:forEach items="${healthFriends}" var="ontology">
 		<li><c:out value="${ontology.localName}"/></lo>
 </c:forEach>
+                    
 </ul>
 Education Friends are:
 <ul>

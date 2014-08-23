@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package eu.gyza.eap.eapsocialontology.twitter;
+package eu.gyza.eap.eapsocialontology.ontology;
 
+import eu.gyza.eap.eapsocialontology.twitter.*;
 import com.hp.hpl.jena.ontology.DatatypeProperty;
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.OntClass;
@@ -44,9 +45,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import eu.gyza.eap.eapsocialontology.ontology.SocialOntology;
 
 @Controller
-public class TwitterOntologyController {
+public class SocialOntologyController {
 
-    private final Twitter twitter;
     private SocialOntology ontology;
     private static String SOURCE = "http://www.eap.gr/gyza/ontology/social";
     private static String NS = SOURCE + "#";
@@ -54,29 +54,16 @@ public class TwitterOntologyController {
     private static String ontologyResource = "eapOntology4.owl";
     
     @Inject
-    public TwitterOntologyController(Twitter twitter, SocialOntology ontology) {
-        this.twitter = twitter;
+    public SocialOntologyController(SocialOntology ontology) {
+  
         this.ontology = ontology;
     }
+
     
-     
-    @RequestMapping(value = "/twitter/healthfriends", method = RequestMethod.GET)
-    public String healthfriends(Model model) {
-        //ontology.loadModel(twitter);
-        model.addAttribute("healthFriendMessages", ontology.getHealthFriendMessages());
-        return "ontology/healthfriends";
-    }
-    
-    @RequestMapping(value = "/twitter/ontology", method = RequestMethod.GET)
+    @RequestMapping(value = "/ontology", method = RequestMethod.GET)
     public String ontologies(Model model) {
-        ontology.loadModel(twitter);
-        model.addAttribute("musicFriends", ontology.getMusicFiends());
-        model.addAttribute("foodFriends", ontology.getFoodFiends());
-        model.addAttribute("eduFriends", ontology.getEduFiends());
-        model.addAttribute("healthFriends", ontology.getHealthFriends());
-        model.addAttribute("sportFriends", ontology.getSportFiends());
-        model.addAttribute("messageForm", new MessageForm());
-        ontology.save();        
-        return "twitter/ontology";
+        ontology.initilize();
+        model.addAttribute("interests", ontology.getInterestCategories());
+        return "ontology/show";
     }
 }

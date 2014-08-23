@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1408653932902" name="duplicate:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="target/eap-social-ontology-1.0.0/WEB-INF/classes/eapOntology3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1408653932902" name="duplicate:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="target/eap-social-ontology-1.0.0/WEB-INF/classes/eapOntology4.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1408653932902" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="target/eap-social-ontology-1.0.0/resources/eapOntology3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1408653932902" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="target/classes/eapOntology3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1408653932902" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="target/classes/eapOntology4.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1408653932902" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="src/main/java/eapOntology3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1408653932902" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="src/main/java/eapOntology4.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1408653932902" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="src/main/webapp/resources/eapOntology3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1408738040480" name="http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="src/main/webapp/resources/eapOntology3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1408738040480" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="src/main/java/eapOntology3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1408738040480" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="src/main/java/eapOntology4.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1408738040480" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="target/classes/eapOntology3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1408738040480" name="shadowed:http://www.semanticweb.org/tmns/ontologies/2014/4/eapOntology" uri="target/classes/eapOntology4.owl"/>
     </group>
 </catalog>

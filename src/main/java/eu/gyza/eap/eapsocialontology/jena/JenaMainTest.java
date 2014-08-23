@@ -63,7 +63,8 @@ public class JenaMainTest {
         String NS = SOURCE + "#";
         String foafNS ="http://xmlns.com/foaf/0.1/";
         //String file = "C://projects/eap/eapOntology3.owl";
-        String file = "C:\\projects\\GinasThesis_EAP\\protegeOntology\\eapOntology6.owl";
+       // String file = "C:\\projects\\GinasThesis_EAP\\protegeOntology\\eapOntology6.owl";
+        String file = "C:\\Users\\ydespotopoulos\\Documents\\NetBeansProjects\\EAPSocialOntology\\new_eapOntology4.owl";
      //   String urlSting = "https://github.com/nikolakg/EAPSocialOntology/blob/master/src/main/resources/eapOntology3.owl";
         
         
@@ -175,7 +176,8 @@ public class JenaMainTest {
         
         for (Iterator<Individual> i = inf.listIndividuals(foodAndDrinkMessageResource); i.hasNext();) {   
             Individual o = i.next();
-            System.out.println(o.getLocalName()+ " is foodAndDrinkMessage" );
+            System.out.println( o.getProperty(messageTextProp).getString()+ " is foodAndDrinkMessage" );
+           
         }
         
         Resource fanddFiendResouce = inf.getResource(NS + "FoodAndDrinkFriend");

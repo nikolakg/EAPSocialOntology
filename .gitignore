@@ -39,3 +39,4 @@ Icon
 *.class
 target
 /target - Copy/
+/catalog-v001.xml

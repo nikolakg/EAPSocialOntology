@@ -53,7 +53,7 @@ Sport Friends  [because of <a href="<c:url value="/ontology/msgs/sport"/>">Messa
 
 <c:url var="tweetUrl" value="/twitter/owltweet" />
 <sf:form action="${tweetUrl}" method="post" modelAttribute="messageForm">
-	<p>Post tweet(s) to Ontology Group Friends</p>
+	<p><h3>Post tweet(s) to Ontology Group Friends</h3></p>
 	<sf:label path="to">To: </sf:label>
         <sf:select path="friend">
             <sf:option value="NONE" label="--- Select ---"/>

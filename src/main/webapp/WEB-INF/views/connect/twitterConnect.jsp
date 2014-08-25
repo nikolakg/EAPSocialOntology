@@ -8,7 +8,7 @@
 <form action="<c:url value="/connect/twitter" />" method="POST">
 	<div class="formInfo">
 		<p>
-			You haven't created any connections with Twitter yet. Click the button to connect EAP Ontology with your Twitter account. 
+			You haven't created any connections with Twitter yet. Click the button to connect EAP Social Ontology with your Twitter account. 
 			(You'll be redirected to Twitter where you'll be asked to authorize the connection.)
 		</p>
 	</div>
